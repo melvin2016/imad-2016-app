@@ -17,6 +17,57 @@ app.get('/works', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'works.html'));
 });
 
+var profile={
+    title: "Profile Meak Inc.",
+    heading:"Profile",
+    para1:"We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous ! We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !",
+    para2:" Just Kidding ! ",
+    para3:"Sorry For Troubling You !"
+}
+
+function createTemplate(data){
+    var title = data.title;
+    var heading = data.heading;
+    var para1 = data.para1;
+    var para2 = data.para2;
+    var para3 = data.para3;
+    
+    var htmlContent=`<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width, initial-sacle=1"> 
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <a href="/"><u>Home</u></a>
+            <a href="profile"><u>Profile</u></a>
+            <a href="works"><u>Works</u></a>
+            <a href="Vision"><u>VISION ! :D</u></a>
+            <h1>${heading}<hr></h1>
+            
+            <p>
+                ${para1}
+            </p>
+            <p>
+                ${para2} 
+            </p>
+            <p>${para3}</p>
+            
+        <footer>
+            <p>Meak Inc.</p>    
+        </footer>
+        
+        </div>
+    </body> 
+</html>`
+
+return htmlContent;
+}
+
+
 app.get('/vision', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'vision.html'));
 });
