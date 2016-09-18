@@ -4,14 +4,15 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+//For Home Page
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+//For Profile Page
 app.get('/profile', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
-
+//For Works Page
 app.get('/works', function (req, res) {
   res.send('Works Of Meak Inc.');
 });
