@@ -14,11 +14,11 @@ app.get('/profile', function (req, res) {
 });
 //For Works Page
 app.get('/works', function (req, res) {
-  res.send('Works Of Meak Inc.');
+  res.sendFile(path.join(__dirname, 'ui', 'works.html'));
 });
 
 app.get('/vision', function (req, res) {
-  res.send('Vision Of Meak Inc.');
+  res.sendFile(path.join(__dirname, 'ui', 'vision.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
