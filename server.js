@@ -49,7 +49,7 @@ function createTemplate(data){
             <a href="/"><u>Home</u></a>
             <a href="profile"><u>Profile</u></a>
             <a href="works"><u>Works</u></a>
-            <a href="Vision"><u>VISION ! :D</u></a>
+            <a href="vision"><u>VISION ! :D</u></a>
             <h1>${heading}<hr></h1>
             
             <p>
