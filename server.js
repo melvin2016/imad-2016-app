@@ -5,14 +5,30 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var profile={
+var articles={
+    profile:{
     title: "Profile Meak Inc.",
     heading:"Profile",
     para1:"We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous ! We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !",
     para2:" Just Kidding ! ",
     para3:"Sorry For Troubling You !"
+},
+    works:{
+        title:"Works",
+        heading:"Works",
+        para1:"My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !",
+        para2:" Just Kidding ! ",
+        para3:"Sorry For Troubling You !"
+        },
+    vision:{
+            title:"Vision | Meak Studios",
+            heading:"VISION !",
+            para1:"My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !",
+            
+            para2:" Just Kidding ! ",
+            para3:"Sorry For Troubling You !"
+        }   
 }
-
 function createTemplate(data){
     var title = data.title;
     var heading = data.heading;
@@ -59,10 +75,12 @@ return htmlContent;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-//For Profile Page
-app.get('/profile', function (req, res) {
-  res.send(createTemplate(profile));
+//For Other PAges
+app.get('/:articleName', function (req, res) {
+    var article = articleName;
+    res.send(createTemplate(article));
 });
+/*
 //For Works Page
 app.get('/works', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'works.html'));
@@ -72,7 +90,7 @@ app.get('/works', function (req, res) {
 app.get('/vision', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'vision.html'));
 });
-
+*/
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
