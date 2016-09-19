@@ -50,6 +50,9 @@ function createTemplate(data){
             <a href="profile"><u>Profile</u></a>
             <a href="works"><u>Works</u></a>
             <a href="vision"><u>VISION ! :D</u></a>
+            <div class="center">
+                <img src="/ui/meak.png" class="img-medium"/>
+            </div>
             <h1>${heading}<hr></h1>
             
             <p>
