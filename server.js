@@ -75,22 +75,12 @@ return htmlContent;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
 //For Other PAges
-app.get('/:articleName', function (req, res) {
-    var articleName = req.params.articleName;
+app.get('/:articlename', function (req, res) {
+    var articleName = req.params.articlename;
     res.send(createTemplate(articles[articleName]));
 });
-/*
-//For Works Page
-app.get('/works', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'works.html'));
-});
-
-
-app.get('/vision', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'vision.html'));
-});
-*/
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
