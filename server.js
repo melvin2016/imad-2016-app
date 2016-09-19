@@ -77,8 +77,8 @@ app.get('/', function (req, res) {
 });
 //For Other PAges
 app.get('/:articleName', function (req, res) {
-    var article = articleName;
-    res.send(createTemplate(article));
+    var articleName = req.params.articleName;
+    res.send(createTemplate(articles[articleName]));
 });
 /*
 //For Works Page
