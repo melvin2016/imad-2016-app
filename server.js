@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articles={
     profile:{
-    title: "Profile Meak Inc.",
+    title: "Profile",
     heading:"Profile",
     para1:"We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous ! We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !We Are Legion . We Do Not Forget . We Do Not Forgive . We Are Anonymous !",
     para2:" Just Kidding ! ",
@@ -21,7 +21,7 @@ var articles={
         para3:"Sorry For Troubling You !"
         },
     vision:{
-            title:"Vision | Meak Studios",
+            title:"Vision",
             heading:"VISION !",
             para1:"My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !My Recent Works Are Based On editing A Video ! But We are Big You Know Like we make a lot of things that humas don't but , funny isnt it ? Then Fuck You !",
             
