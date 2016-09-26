@@ -1,11 +1,11 @@
-function main(){
-    $('.myCont').click(function(){
-        $('.tobeHighlight').animate({
-            left:"0px"
-        },200);
-        
-    });
+var img = document.getElementById("meak");
+var marginLeft=0;
+function moveRight(){
+    marginLeft =+ 10;
+    img.style.marginLeft = marginLeft + "px";
     
 }
-
-$(document).ready(main);
+img.onclick = function(){
+  var interval = setInterval(moveRight,100);  
+    
+};
