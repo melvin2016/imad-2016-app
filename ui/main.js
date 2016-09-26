@@ -1,8 +1,8 @@
 function main(){
     $('.myCont').click(function(){
-        $('.tobeHighlght').animate({
+        $('.tobeHighlight').animate({
             left:"0px"
-        },"200px");
+        },200);
         
     });
     
