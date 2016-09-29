@@ -1,5 +1,15 @@
 body {
-    font-family: fantasy;
+    font-family: 'Baloo Bhai', cursive;
+    background-image: url(https://4.bp.blogspot.com/-6vN2EgZ29xU/VAi4ETlhVmI/AAAAAAABLes/QyA-KxNMXuM/s0/Inside%2Bthe%2Bgreen%2Bforest_Ultra%2BHD.jpg) ;
+    background-size: 1280px 1240px;
+    background-repeat: no-repeat;
+}
+a{
+text-decoration: none;
+color:#69B4D4;
+font-weight:bold;
+font-size: 40px;
+font-family: 'Amatic SC', cursive;
 }
 
 .center {
@@ -16,13 +26,54 @@ body {
 
 .img-medium {
     height: 250px;
-   
-    border-radius:50px;
+    width:auto;
+    border-radius:60px;
+    margin-top: 20px;
+    border-color: black;
+    border-width:medium;
 }
 
 .container {
     max-width:800px;
     margin: auto;
-    color: #583580;
-    
-    }
+    color:#DFD53F;
+}
+
+img{
+
+height:40px;
+width:45px;
+border-radius: 18px;
+
+}
+p{
+  text-align: center;
+  color:#cdc28b;
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+  color: #e7ea91;
+
+}
+
+
+footer {
+
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 50px;
+    height: 100px;/* or however high you would like */
+    text-align: center;
+    color:#fffdee;\
+    font-weight: bolder;
+}
+
+footer{
+  font-family:'Oswald';
+  color:#FF5722;
+
+}
