@@ -52,7 +52,7 @@ function createTemplate(data){
         <a id="works"href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> Works</a>
         <a id="vision"href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a>
             <div class="center">
-                <img src="/ui/{$head_img}" class="img-medium"/>
+                <img src="/ui/${head_img}" class="img-medium"/>
             </div>
             <h1>${heading}<hr></h1>
 
