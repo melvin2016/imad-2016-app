@@ -15,7 +15,7 @@ var articles={
 
 },
     works:{
-        title:"Works",
+        title:"The Works",
         head_img:"works.png",
         heading:"Works",
         para1:"Coming Soon !",
@@ -49,7 +49,7 @@ function createTemplate(data){
         <div class="container">
         <a id="home"href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
         <a id="profile" href="profile"><img src="https://4bis.nl/img/profile.png"alt="Profile"> Profile</a>
-        <a id="works"href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> Works</a>
+        <a id="works"href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works">The Works</a>
         <a id="vision"href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a>
             <div class="center">
                 <img src="/ui/${head_img}" class="img-medium"/>
