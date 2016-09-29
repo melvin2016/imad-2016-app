@@ -1,13 +1,8 @@
-var img = document.getElementById("meak");
-var content = document.getElementById("myCont");
-content.innerHTML = "Shokam";
-var marginLeft=0;
-function moveRight(){
-    marginLeft = marginLeft + 10;
-    img.style.marginLeft = marginLeft + "px";
+//counter variable and function 
+var button = document.getElementById('counter');
+button.onClick = function(){
+    var counter=0
+    counter = counter + 1;
     
-}
-img.onClick = function(){
-  var interval = setInterval(moveRight,100);  
     
 };
