@@ -8,7 +8,7 @@ app.use(morgan('combined'));
 var articles={
     profile:{
     title: "Profile",
-    head_img:"ui/me.jpg",
+    head_img:"me.jpg",
     heading:"Profile",
     para1:"Name : Melvin George (Chatan)",
     para2:"<span style=color:#a7ea09>Current Status :  Developing Imad App ! :D</span>",
@@ -16,14 +16,14 @@ var articles={
 },
     works:{
         title:"Works",
-        head_img:"http://makered.org/wp-content/uploads/2013/02/works-logo-purple-cutout.png",
+        head_img:"works.png",
         heading:"Works",
         para1:"Coming Soon !",
         para2:" Just Kidding ! ",
         },
     vision:{
             title:"Vision",
-            head_img:"http://www.saranathan.ac.in/img/vm/vision.png",
+            head_img:"vision.png",
             heading:"VISION !",
             para1:"<bold>If today were the last day Of your Life,Would you want to do what you are about to do today ?<br><i> - Steve Jobs</i></bold>",
             para2:"<bold>Thanks to IMAD Team for Helping Me Build This !</bold>",
@@ -52,7 +52,7 @@ function createTemplate(data){
         <a id="works"href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> Works</a>
         <a id="vision"href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a>
             <div class="center">
-                <img src="/{$head_img}" class="img-medium"/>
+                <img src="/ui/{$head_img}" class="img-medium"/>
             </div>
             <h1>${heading}<hr></h1>
 
@@ -106,6 +106,13 @@ app.get('/ui/me.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'me.jpg'));
 });
 
+app.get('/ui/works.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'works.png'));
+});
+
+app.get('/ui/vision.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'vision.png'));
+});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
