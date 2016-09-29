@@ -4,7 +4,7 @@ var counter=0;
 button.onclick = function(){
     
     counter = counter + 1;
-    span = document.getElementById('noOftimes');
+    span = document.getElementById('noOfTimes');
     span.innerHTML = counter.toString();
     
     
