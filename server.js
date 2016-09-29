@@ -17,7 +17,7 @@ var articles={
     works:{
         title:"The Works",
         head_img:"works.png",
-        heading:"Works",
+        heading:"The Works",
         para1:"Coming Soon !",
         para2:" Just Kidding ! ",
         },
