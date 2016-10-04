@@ -61,7 +61,7 @@ submit.onclick = function(){
     var comment = inputComment.value;
      var inputNAme = document.getElementById('input_name');
     var name = inputName.value;
-    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment+'name='name,true);
+    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment,true);
     request.send(null);
      
      
