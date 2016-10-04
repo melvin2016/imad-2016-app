@@ -46,7 +46,7 @@ submit.onclick = function(){
          
                  }
      
-                ul_list.innerHTML = list;
+                ul_list.innerHTML = "<br>Comments:"+list;
                 
             }
             
