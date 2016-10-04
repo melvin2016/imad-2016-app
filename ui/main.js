@@ -26,6 +26,7 @@ button.onclick = function(){
 var inputComment = document.getElementById('input_comment');
 var comment = inputComment.value;
 var submit = document.getElementById('submit_btn');
+var ul_list = document.getElementById('ul_list');
 submit.onclick = function(){
      
      var comments=['comment1','comment2','comment3'];
@@ -37,4 +38,5 @@ submit.onclick = function(){
          
      }
      
+     ul_list.innerHTML = list;
  };
