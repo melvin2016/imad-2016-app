@@ -21,3 +21,20 @@ button.onclick = function(){
     request.open('GET','http://melvin2016.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+
+var inputComment = document.getElementById('input_comment');
+var comment = inputComment.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+     
+     var comments=['comment1','comment2','comment3'];
+     var list='';
+     
+     for(i=0; i < comments.length ; i++){
+         
+         list = '<li>'+comments[i]+'</li>';
+         
+     }
+     
+ };
