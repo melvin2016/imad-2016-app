@@ -63,7 +63,7 @@ function createTemplate(data){
     </head>
     <body>
         
-   // <script type="text/javascript" src="/ui/main.js"> </script>
+       
         <div class="container">
             <a href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
             <a href="profile"><img src="https://4bis.nl/img/profile.png"alt="Profile"> Profile</a>
