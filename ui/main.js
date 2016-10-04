@@ -23,20 +23,39 @@ button.onclick = function(){
 };
 
 
-var inputComment = document.getElementById('input_comment');
-var comment = inputComment.value;
+
 var submit = document.getElementById('submit_btn');
 var ul_list = document.getElementById('ul_list');
 submit.onclick = function(){
+    
+    
      
-     var comments=['comment1','comment2','comment3'];
-     var list='';
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        
+        if(request.readyState===XMLHttpRequest.DONE){
+            //We should do something
+            if(request.status===200){
+                var comments=['comment1','comment2','comment3'];
+                var list='';
      
-     for(i=0; i < comments.length ; i++){
+                for(i=0; i < comments.length ; i++){
          
-         list += '<li>'+comments[i]+'</li>';
+                 list += '<li>'+comments[i]+'</li>';
          
-     }
+                 }
      
-     ul_list.innerHTML = list;
+                ul_list.innerHTML = list;
+                
+            }
+            
+        }
+        
+    };
+    var inputComment = document.getElementById('input_comment');
+    var comment = inputComment.value;
+    request.open('GET','http://melvin2016.imad.hasura-app.io/sumibt-comment?comment'+comment,true);
+    request.send(null);
+     
+     
  };
