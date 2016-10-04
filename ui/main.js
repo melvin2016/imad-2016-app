@@ -36,7 +36,8 @@ submit.onclick = function(){
         if(request.readyState===XMLHttpRequest.DONE){
             //We should do something
             if(request.status===200){
-                var comments=['comment1','comment2','comment3'];
+                var comments = request.responseText;
+                comments = JSON.parse('comments')
                 var list='';
      
                 for(i=0; i < comments.length ; i++){
