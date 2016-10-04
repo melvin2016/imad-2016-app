@@ -37,7 +37,7 @@ submit.onclick = function(){
             //We should do something
             if(request.status===200){
                 var comments = request.responseText;
-                //comments = JSON.parse(comments);
+                comments = JSON.parse(comments);
                 var list='';
      
                 for(i=0; i < comments.length ; i++){
