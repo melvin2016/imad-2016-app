@@ -59,7 +59,7 @@ function createTemplate(data){
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Lalezar|Lato|Oswald" rel="stylesheet">
         <link type="text/css"href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-sacle=1">
-        <script type="text/javascript" src="/ui/main.js"> </script>
+        
     </head>
     <body>
         
