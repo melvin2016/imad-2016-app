@@ -37,12 +37,16 @@ submit.onclick = function(){
             //We should do something
             if(request.status===200){
                 var comments = request.responseText;
+                var names. request.responseText;
+                
                 comments = JSON.parse(comments);
+                names = JSON.parse(names);
+                
                 var list='';
      
                 for(i=0; i < comments.length ; i++){
          
-                 list += '<li>'+comments[i]+'</li>';
+                 list += '<li>'+names[i]-+comments[i]+'</li>';
          
                  }
      
@@ -55,7 +59,7 @@ submit.onclick = function(){
     };
     var inputComment = document.getElementById('input_comment');
     var comment = inputComment.value;
-    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment,true);
+    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment+'name='name,true);
     request.send(null);
      
      
