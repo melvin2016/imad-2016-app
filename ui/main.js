@@ -29,7 +29,7 @@ var submit = document.getElementById('submit_btn');
 var ul_list = document.getElementById('ul_list');
 submit.onclick = function(){
      
-     var comments=['comment1','comment2','comment3'];
+     var comments=[comment1,comment2,comment3];
      var list='';
      
      for(i=0; i < comments.length ; i++){
