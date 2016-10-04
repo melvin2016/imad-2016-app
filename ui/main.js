@@ -54,7 +54,7 @@ submit.onclick = function(){
     };
     var inputComment = document.getElementById('input_comment');
     var comment = inputComment.value;
-    request.open('GET','http://melvin2016.imad.hasura-app.io/sumibt-comment?comment='+comment,true);
+    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment,true);
     request.send(null);
      
      
