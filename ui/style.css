@@ -58,6 +58,19 @@ h1{
 
 }
 
+fieldset{
+    position:bottom;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    padding-top:20px;
+    padding-bottom: 50px;
+    height: 100px;/* or however high you would like */
+    text-align: center;
+    color:#fffdee;
+    font-weight: bolder;
+    
+}
 
 footer {
     position:bottom;
