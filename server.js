@@ -90,6 +90,15 @@ app.get('/counter', function(req,res){
     
 });
 
+var comments=[];
+app.get('/submit-comment/:comment' , function(req,res){
+    
+    var comment = req.params.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+    
+});
+
 //For Other PAges
 app.get('/:articlename', function (req, res) {
     var articleName = req.params.articlename;
