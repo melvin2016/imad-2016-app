@@ -91,11 +91,15 @@ app.get('/counter', function(req,res){
 });
 
 var comments=[];
+var names=[];
 app.get('/submit-comment' , function(req,res){
     
     var comment = req.query.comment;
+    var name = req.query.name;
     comments.push(comment);
+    names.push(name);
     res.send(JSON.stringify(comments));
+    res.send(JSON.stringify(names));
     
 });
 
