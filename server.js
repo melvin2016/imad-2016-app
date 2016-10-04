@@ -43,6 +43,7 @@ app.get('/submit-comment' , function(req,res){
     comments.push(comment);
     res.send(JSON.stringify(comments));
 });
+
 function createTemplate(data){
     var title = data.title;
     var head_img = data.head_img;
@@ -60,6 +61,7 @@ function createTemplate(data){
         <meta name="viewport" content="width=device-width, initial-sacle=1">
     </head>
     <body>
+        <script type="text/javascript" src="/ui/main.js"> </script>
     
         <div class="container">
             <a href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
