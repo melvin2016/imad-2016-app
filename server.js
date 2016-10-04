@@ -61,9 +61,10 @@ function createTemplate(data){
         <meta name="viewport" content="width=device-width, initial-sacle=1">
     </head>
     <body>
-        <script type="text/javascript" src="/ui/main.js"> </script>
+        
     
         <div class="container">
+            <script type="text/javascript" src="/ui/main.js"> </script>
             <a href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
             <a href="profile"><img src="https://4bis.nl/img/profile.png"alt="Profile"> Profile</a>
             <a href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works">The Works</a>
@@ -101,6 +102,7 @@ function createTemplate(data){
       </p>
       &copy Meak Inc.
       </footer>
+      <script type="text/javascript" src="/ui/main.js"></script>
     </body>
 </html>`
 
