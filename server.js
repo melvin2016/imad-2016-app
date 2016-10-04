@@ -75,7 +75,7 @@ function createTemplate(data){
                     <ul id="ul_list">
                         
                     </ul>
-                </fieldset>
+            </fieldset>
         </div>
         
       <footer>
