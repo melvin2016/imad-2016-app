@@ -29,6 +29,20 @@ var articles={
             para2:"<bold>Thanks to IMAD Team for Helping Me Build This !</bold>",
         }
 }
+
+var counter=0;
+app.get('/counter', function(req,res){
+   counter = counter + 1;
+   res.send(counter.toString());
+    
+});
+
+var comments=[];
+app.get('/submit-comment' , function(req,res){
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+});
 function createTemplate(data){
     var title = data.title;
     var head_img = data.head_img;
@@ -96,19 +110,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var counter=0;
-app.get('/counter', function(req,res){
-   counter = counter + 1;
-   res.send(counter.toString());
-    
-});
 
-var comments=[];
-app.get('/submit-comment' , function(req,res){
-    var comment = req.query.comment;
-    comments.push(comment);
-    res.send(JSON.stringify(comments));
-});
 
 //For Other PAges
 app.get('/:articlename', function (req, res) {
