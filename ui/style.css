@@ -61,14 +61,14 @@ h1{
 
 footer {
 
-    position:absolute;
+    position:left;
     bottom:0px;
     width: 100%;
     margin: 0;
     padding-bottom: 50px;
     height: 100px;/* or however high you would like */
-    text-align: center;
-    color:#fffdee;\
+    text-align: left;
+    color:#fffdee;
     font-weight: bolder;
 }
 
