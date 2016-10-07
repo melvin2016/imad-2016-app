@@ -91,7 +91,7 @@ function createTemplate(data){
                     </legend>
                     <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
                     Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
-                    &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit !" id="submit_btn">&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit !" id="submit_btn" src="https://upload.wikimedia.org/wikipedia/commons/1/13/Facebook_like_thumb.png">&nbsp;&nbsp;&nbsp;
 
                     <ul id="ul_list">
 
