@@ -46,11 +46,11 @@ submit.onclick = function(){
      
                 for(i=0; i < comments.length ; i++){
          
-                 list += '<li>'+comments[i]+'</li>';
+                 list += '<li id="comments_list">'+comments[i]+'</li>';
          
                  }
      
-                ul_list.innerHTML = "<br>Comments:"+list;
+                ul_list.innerHTML = "<br id="comments">Comments:"+list;
                 
             }
             
