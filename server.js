@@ -65,10 +65,14 @@ function createTemplate(data){
 
 
         <div class="container">
-            <a href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
-            <a href="profile"><img src="https://4bis.nl/img/profile.png"alt="Profile"> Profile</a>
-            <a href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works">The Works</a>
-            <a href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a>
+            <div class="links">
+              <ul>
+                <li><a class="active" href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a></li>
+                <li><a href="profile"><img src="https://4bis.nl/img/profile.png" alt="Profile"> Profile</a></li>
+                <li><a href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> The Works</a></li>
+                <li ><a  href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a></li>
+              </ul>
+            </div>
             <div class="center">
                 <img src="/ui/${head_img}" class="img-medium"/>
             </div>
