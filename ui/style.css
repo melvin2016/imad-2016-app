@@ -35,7 +35,9 @@ font-family: 'Amatic SC', cursive;
 
 .container {
     max-width:800px;
-    margin: auto;
+    padding-top:100px;
+    margin:auto;
+
     color:#DFD53F;
 }
 
@@ -64,7 +66,7 @@ fieldset{
     text-align: left;
     color:#DFD53F;
     font-weight: bold;
-    
+
 }
 
 footer {
@@ -90,4 +92,39 @@ footer{
     text-align:center;
     font-family:Oswald,sans-serif;
     font-weight:bold;
+}
+
+ul {
+   list-style-type: none;
+   background-color: transparent;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   margin:auto;
+
+}
+
+li {
+
+  float :left;
+  margin-right: 30px;
+}
+
+li a {
+
+  display : block;
+  padding: 8px;
+  background-color:transparent;
+}
+
+li a:hover {
+
+background-color:rgba(17, 17, 17, 0.42);
+}
+li a:active {
+    color:green;
+}
+.active {
+
+  background-color:rgba(0, 255, 0, 0.26);
 }

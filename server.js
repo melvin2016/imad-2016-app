@@ -34,7 +34,7 @@ var counter=0;
 app.get('/counter', function(req,res){
    counter = counter + 1;
    res.send(counter.toString());
-    
+
 });
 
 var comments=[];
@@ -59,11 +59,11 @@ function createTemplate(data){
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Lalezar|Lato|Oswald" rel="stylesheet">
         <link type="text/css"href="/ui/style.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-sacle=1">
-        
+
     </head>
     <body>
-        
-       
+
+
         <div class="container">
             <a href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a>
             <a href="profile"><img src="https://4bis.nl/img/profile.png"alt="Profile"> Profile</a>
@@ -73,28 +73,28 @@ function createTemplate(data){
                 <img src="/ui/${head_img}" class="img-medium"/>
             </div>
             <h1>${heading}<hr></h1>
-        
+
             <p>
                 ${para1}
             </p>
             <p>
                 ${para2}
             </p>
-            
-            <fieldset>    
+
+            <fieldset>
                     <legend>
                     Your Opinions !
                     </legend>
                     <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
                     Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
                     &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit !" id="submit_btn">&nbsp;&nbsp;&nbsp;
-                    
+
                     <ul id="ul_list">
-                        
+
                     </ul>
             </fieldset>
         </div>
-        
+
       <footer>
       <p>
         <a href="https://twitter.com/melvingeorge11"><img src="http://icons.iconarchive.com/icons/spoon-graphics/doodle/128/Twitter-icon.png"></a>
