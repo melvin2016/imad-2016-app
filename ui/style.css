@@ -93,8 +93,7 @@ footer{
     font-family:Oswald,sans-serif;
     font-weight:bold;
 }
-
-ul {
+.links ul {
    list-style-type: none;
    background-color: transparent;
    position: fixed;
@@ -104,24 +103,24 @@ ul {
 
 }
 
-li {
+.links li {
 
   float :left;
   margin-right: 30px;
 }
 
-li a {
+.links li a {
 
   display : block;
   padding: 8px;
   background-color:transparent;
 }
 
-li a:hover {
+.links li a:hover {
 
 background-color:rgba(17, 17, 17, 0.42);
 }
-li a:active {
+.links li a:active {
     color:green;
 }
 .active {
