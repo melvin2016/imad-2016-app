@@ -1,7 +1,8 @@
 body {
     font-family: 'Baloo Bhai', cursive;
     background-image: url(https://4.bp.blogspot.com/-6vN2EgZ29xU/VAi4ETlhVmI/AAAAAAABLes/QyA-KxNMXuM/s0/Inside%2Bthe%2Bgreen%2Bforest_Ultra%2BHD.jpg) ;
-    background-size: 1280px 1240px;
+    background-size: cover;
+    background-position:center;
     background-repeat: no-repeat;
 }
 a{
