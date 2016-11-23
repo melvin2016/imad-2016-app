@@ -159,8 +159,6 @@ app.get('/articles/:articlename', function (req, res) {
         }
         
     });
-    var articleName = req.params.articlename;
-    res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
