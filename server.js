@@ -3,11 +3,11 @@ var morgan = require('morgan');
 var Pool = require('pg').Pool;
 var path = require('path');
 var config = {
-  host : 'localhost',
-  user : 'postgres',
-  password : '',
+  host : 'db.imad.hasura-app.io',
+  user : 'melvin2016',
+  password : process.env.DB_PASSWORD,
   port : '5432',
-  database : 'test'
+  database : 'melvin2016'
 
 };
 var pool = new Pool(config);
