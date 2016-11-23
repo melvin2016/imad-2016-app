@@ -134,7 +134,7 @@ app.get('/', function (req, res) {
 
 //For Other PAges
 app.get('/articles/:articlename', function (req, res) {
-    pool.query("SELECY * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
+    pool.query("SELECT * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
         if(err){
             res.status(500).send(err,toString());
         }else{
