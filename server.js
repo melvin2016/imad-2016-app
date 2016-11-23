@@ -15,7 +15,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articles={
+/*var articles={
     profile:{
     title: "Profile",
     head_img:"me.jpg",
@@ -38,7 +38,7 @@ var articles={
             para1:"<bold>If today were the last day Of your Life,Would you want to do what you are about to do today ?<br><i> - Steve Jobs</i></bold>",
             para2:"<bold>Thanks to IMAD Team for Helping Me Build This !</bold>"
         }
-}
+}*/
 
 var counter=0;
 app.get('/counter', function(req,res){
