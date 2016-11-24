@@ -70,7 +70,7 @@ app.get('/submit-comment' , function(req,res){
 
 function createTemplate(data){
     var title = data.title;
-   // var head_img = data.head_img;
+    var head_img = data.head_img;
     var heading = data.heading;
     var para1 = data.para1;
     var para2 = data.para2;
