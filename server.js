@@ -14,23 +14,7 @@ var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
-//For Other PAges
-app.get('/articles/:articlename', function (req, res) {
-    pool.query("SELECT * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
-        if(err){
-            res.status(500).send(err,toString());
-        }else{
-            if(result.rows.length===0){
-                res.status(404).send("Article not Found !");
-            }else{
-                var articleData = result.rows[0];
-                res.send(createTemplate(articleData));
-            }
-            
-        }
-        
-    });
-});
+
 
 
 /*var articles={
@@ -141,6 +125,23 @@ function createTemplate(data){
 return htmlContent;
 }
 
+//For Other PAges
+app.get('/articles/:articlename', function (req, res) {
+    pool.query("SELECT * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
+        if(err){
+            res.status(500).send(err,toString());
+        }else{
+            if(result.rows.length===0){
+                res.status(404).send("Article not Found !");
+            }else{
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+            
+        }
+        
+    });
+});
 
 
 //For Home Page
