@@ -120,7 +120,7 @@ function createTemplate(data){
   </footer>
   <script type="text/javascript" src="/ui/main.js"> </script>
 </body>
-</html>`
+</html>`;
 
 return htmlContent;
 }
