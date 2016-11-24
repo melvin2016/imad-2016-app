@@ -29,7 +29,7 @@ app.use(morgan('combined'));
 
 
 
-/*var articles={
+var articles={
     profile:{
     title: "Profile",
     head_img:"me.jpg",
@@ -52,7 +52,7 @@ app.use(morgan('combined'));
             para1:"<bold>If today were the last day Of your Life,Would you want to do what you are about to do today ?<br><i> - Steve Jobs</i></bold>",
             para2:"<bold>Thanks to IMAD Team for Helping Me Build This !</bold>"
         }
-}*/
+}
 
 var counter=0;
 app.get('/counter', function(req,res){
@@ -139,7 +139,7 @@ return htmlContent;
 
 //For Other PAges
 app.get('/articles/:articlename', function (req, res) {
-    pool.query("SELECT * FROM articles WHERE id =' " + req.params.articlename +"'" , function(err,result){
+    pool.query("SELECT * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
         if(err){
             res.status(500).send(err,toString());
         }else{
