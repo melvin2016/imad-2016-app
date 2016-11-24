@@ -13,7 +13,7 @@ var config = {
 var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
-app.get('/test-db',function(req,res){
+/*app.get('/test-db',function(req,res){
      pool.query("SELECT * FROM articles ",function(err,result){
         if(err){
             
@@ -25,7 +25,7 @@ app.get('/test-db',function(req,res){
         
     });
     
-});
+});*/
 
 
 
@@ -139,7 +139,7 @@ return htmlContent;
 
 //For Other PAges
 app.get('/articles/:articlename', function (req, res) {
-    pool.query("SELECT * FROM articles WHERE title =' " + req.params.articlename +"'" , function(err,result){
+    pool.query("SELECT * FROM articles WHERE id =' " + req.params.articlename +"'" , function(err,result){
         if(err){
             res.status(500).send(err,toString());
         }else{
