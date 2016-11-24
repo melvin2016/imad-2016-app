@@ -13,7 +13,10 @@ var config = {
 var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
-
+app.get('/test-db',function(req,res){
+    var query = pool.query("SELECT * FROM articles ");
+    res.send(JSON.stringify(query));
+})
 
 
 
@@ -134,7 +137,7 @@ app.get('/articles/:articlename', function (req, res) {
             if(result.rows.length===0){
                 res.status(404).send("Article not Found !");
             }else{
-                var articleData = result.rows;
+                var articleData = result.rows[0];
                 res.send(createTemplate(articleData));
             }
             
