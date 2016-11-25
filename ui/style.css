@@ -143,6 +143,7 @@ input{
 button{
 
   border:0;
+  margin:10px;
   padding:14px;
   font-size:5px;
   font-family: cursive;
