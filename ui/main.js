@@ -100,8 +100,10 @@ submit.onclick = function(){
             if(request.readyState===XMLHttpRequest.DONE){
                 //We should do something
                 if(request.status===200){
+                    alert('User Succesfully Created !');
                     
-                    
+            }else{
+                alert('Something Wrong With The Server !');
             }
         }
     };
