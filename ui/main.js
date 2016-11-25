@@ -64,3 +64,29 @@ submit.onclick = function(){
      
      
  };
+ 
+ var sumbit_form = document.getElementById('submit_form');
+ submit.onclick = function(){
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            
+            if(request.readyState===XMLHttpRequest.DONE){
+                //We should do something
+                if(request.status===200){
+                    console.log("User is Successfully Logged In !");
+                    alert("User is Successfully Logged In !");
+                    
+                }else if(request.status === 403){
+                    alert("Invalid username Or Password!");
+                }else if(request.status===500){
+                    alert("Something Went Wrong In The server ! ");
+                }
+                
+            }
+        }
+    var username = document.getElementbyId('username').value;
+    var password = document.getElementbyId('password').value;
+    request.open('POST','http://melvin2016.imad.hasura-app.io/login,true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username,password:password}));
+ }
