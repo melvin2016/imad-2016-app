@@ -153,6 +153,8 @@ button{
 select{
     background-color:transparent;
     margin:20px;
+    font:30px;
+    padding:10px;
     color:white;
     border-radius:20px;
     
