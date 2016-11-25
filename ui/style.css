@@ -149,6 +149,15 @@ button{
   border-radius: 55px;
   font-weight: bolder;
 }
+input[type="submit"]{
 
+  border:0;
+  padding:15px;
+  font-size:13px;
+  font-family: cursive;
+  border-radius: 55px;
+  font-weight: bolder;
+
+}
 
 
