@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var Pool = require('pg').Pool;
 var path = require('path');
+var crypto = require('crypto');
+var bodyParser = require('body-parser');
 var config = {
   host : 'db.imad.hasura-app.io',
   user : 'melvin2016',
@@ -13,6 +15,7 @@ var config = {
 var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 /*app.get('/test-db',function(req,res){
      pool.query("SELECT * FROM articles ",function(err,result){
         if(err){
@@ -138,7 +141,7 @@ return htmlContent;
 }
 
 //For Other PAges
-app.get('/articles/:articlename', function (req, res) {
+app.post('/articles/:articlename', function (req, res) {
     pool.query("SELECT * FROM articles WHERE title =$1",[req.params.articlename] , function(err,result){
         if(err){
             res.status(500).send(err.toString());
@@ -155,6 +158,29 @@ app.get('/articles/:articlename', function (req, res) {
     });
 });
 
+function hash(string,salt){
+    var hash = crypto.pbkdf2Sync(string, salt, 100000, 512, 'sha512');
+    return ["pbkdf2","100000",salt,hash.toString('hex')].join('$');
+}
+
+app.get('/create-user',function(req,res){
+    
+    var username = req.body.username;
+    var password = req.body.password;
+    
+    var salt = crypto.randomBytes(128).toString('hex');
+    var dbString = hash(password,salt);
+    pool.query('INSERT INTO "user" (username,password) VALUES ($1 ,$2)',[username,dbString],function(err,result){
+        
+        if(err){
+            res.status(500).send(err.toString());
+        }else{
+            res.send("USER SUCCESSFULLY CREATED "+username);
+        }
+        
+    });
+    
+});
 
 //For Home Page
 app.get('/', function (req, res) {
