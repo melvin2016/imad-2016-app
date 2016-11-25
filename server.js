@@ -4,7 +4,7 @@ var Pool = require('pg').Pool;
 var path = require('path');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
-var session = require('express-session')
+var session = require('express-session');
 
 var config = {
   host : 'db.imad.hasura-app.io',
