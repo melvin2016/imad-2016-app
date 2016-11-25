@@ -150,12 +150,3 @@ button{
   font-weight: bolder;
 }
 
-select{
-    background-color:transparent;
-    margin:20px;
-    font-size:15px;
-    padding:10px;
-    color:white;
-    border-radius:20px;
-    
-}
