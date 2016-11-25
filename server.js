@@ -98,7 +98,7 @@ function createTemplate(data){
           </ul>
         </div>
         <div class="center">
-            <img src="/ui/" class="img-medium"/>
+            <img src="/ui/${head_img}" class="img-medium"/>
         </div>
         <h1>${heading}<hr></h1>
 
