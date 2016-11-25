@@ -65,7 +65,7 @@ submit.onclick = function(){
      
  };
  
- var sumbit_form = document.getElementById('submit_form');
+ var submit_form = document.getElementById('submit_form');
  submit.onclick = function(){
         var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
