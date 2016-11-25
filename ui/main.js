@@ -66,7 +66,7 @@ submit.onclick = function(){
  };
  
  var submit_form = document.getElementById('submit_form');
- submit.onclick = function(){
+ submit_form.onclick = function(){
         var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
             
