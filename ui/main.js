@@ -83,10 +83,10 @@ submit.onclick = function(){
                 }
                 
             }
-        }
+        };
     var username = document.getElementbyId('username').value;
     var password = document.getElementbyId('password').value;
-    request.open('POST','http://melvin2016.imad.hasura-app.io/login,true);
+    request.open('POST','http://melvin2016.imad.hasura-app.io/login' , true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username:username,password:password}));
- }
+ };
