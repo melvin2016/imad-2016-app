@@ -1,3 +1,5 @@
+var username = document.getElementById('username').value;
+var password = document.getElementById('password').value;
 //counter variable and function 
 var button = document.getElementById('counter');
 var counter=0;
@@ -84,9 +86,28 @@ submit.onclick = function(){
                 
             }
         };
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
+
     request.open('POST','http://melvin2016.imad.hasura-app.io/login' , true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username:username,password:password}));
  };
+ 
+ var register_user = document.getElementbyId('register_user');
+ register_user.onclick = function(){
+     var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            
+            if(request.readyState===XMLHttpRequest.DONE){
+                //We should do something
+                if(request.status===200){
+                    
+                    
+            }
+        }
+    };
+ request.open('POST','http://melvin2016.imad.hasura-app.io/create-user' , true);
+ request.setRequestHeader('Content-Type','application/json');
+ request.send(JSON.stringify({username:username,password:password}));
+ 
+     
+};
