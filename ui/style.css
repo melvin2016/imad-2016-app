@@ -143,9 +143,8 @@ input{
 button{
 
   border:0;
-  margin:10px;
   padding:14px;
-  font-size:5px;
+  font-size:10px;
   font-family: cursive;
   border-radius: 55px;
   font-weight: bolder;
