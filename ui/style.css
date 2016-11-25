@@ -152,11 +152,12 @@ button{
 input[type="submit"]{
 
   border:0;
-  padding:8px;
-  font-size:7px;
+  padding:10px;
+  font-size:13px;
   font-family: cursive;
   border-radius: 55px;
   font-weight: bolder;
+  margin:0 1;
 
 }
 
