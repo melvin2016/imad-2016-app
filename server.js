@@ -4,6 +4,7 @@ var Pool = require('pg').Pool;
 var path = require('path');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+
 var config = {
   host : 'db.imad.hasura-app.io',
   user : 'melvin2016',
@@ -13,49 +14,13 @@ var config = {
 
 };
 var pool = new Pool(config);
+
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
-/*app.get('/test-db',function(req,res){
-     pool.query("SELECT * FROM articles ",function(err,result){
-        if(err){
-            
-            res.status(500).send(err,toString());
-            
-        }else{
-            res.send(JSON.stringify(result));
-        }
-        
-    });
-    
-});*/
 
 
 
-var articles={
-    profile:{
-    title: "Profile",
-    head_img:"me.jpg",
-    heading:"Profile",
-    para1:"Name : Melvin George (Chatan)",
-    para2:"<span style=color:#a7ea09>Current Status :  Developing Imad App ! :D</span>"
-
-},
-    works:{
-        title:"The Works",
-        head_img:"works.png",
-        heading:"The Works",
-        para1:"Coming Soon !",
-        para2:" Just Kidding ! "
-        },
-    vision:{
-            title:"Vision",
-            head_img:"vision.png",
-            heading:"VISION !",
-            para1:"<bold>If today were the last day Of your Life,Would you want to do what you are about to do today ?<br><i> - Steve Jobs</i></bold>",
-            para2:"<bold>Thanks to IMAD Team for Helping Me Build This !</bold>"
-        }
-}
 
 var counter=0;
 app.get('/counter', function(req,res){
