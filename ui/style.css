@@ -98,8 +98,6 @@ footer{
    list-style-type: none;
    background-color: transparent;
    position: fixed;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
    top: 0;
   
    
