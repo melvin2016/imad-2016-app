@@ -4,6 +4,7 @@ var Pool = require('pg').Pool;
 var path = require('path');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session')
 
 var config = {
   host : 'db.imad.hasura-app.io',
@@ -18,6 +19,13 @@ var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    
+    secret:"glassdoor",
+    cookies:{maxAge:1000*60*60*24*30}
+
+    
+    }));
 
 
 
