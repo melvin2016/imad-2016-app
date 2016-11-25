@@ -92,7 +92,7 @@ submit.onclick = function(){
     request.send(JSON.stringify({username:username,password:password}));
  };
  
- var register_user = document.getElementbyId('register_user');
+ var register_user = document.getElementById('register_user');
  register_user.onclick = function(){
      var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
