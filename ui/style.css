@@ -149,3 +149,8 @@ button{
   border-radius: 55px;
   font-weight: bolder;
 }
+
+select{
+    background-color:transparent;
+    
+}
