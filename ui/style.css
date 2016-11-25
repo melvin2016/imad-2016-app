@@ -100,14 +100,14 @@ footer{
    position: fixed;
    top: 0;
    width: 100%;
-   /*margin:auto;*/
+   margin:auto;
 
 }
 
 .links li {
 
   float :left;
-  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .links li a {
