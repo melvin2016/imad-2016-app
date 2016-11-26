@@ -79,7 +79,7 @@ submit.onclick = function(){
                     console.log("User is Successfully Logged In !");
                     alert("User is Successfully Logged In !");
                     submit_form.value="Logged In !"
-                    logoutArea.innerHTML = '<button href="/logout">Logout</button>';
+                    logoutArea.innerHTML = '<button href="http://melvin2016.imad.hasura-app.io/logout">Logout</button>';
                     
                     
                     
