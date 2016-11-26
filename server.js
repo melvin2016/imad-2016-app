@@ -199,14 +199,17 @@ app.post('/login',function(req,res){
 });
 
 app.get('/check-login',function(req,res){
-    if (req.session && req.session.auth && req.session.auth.userId){
-        res.send("You Are Logged in "+req.session.auth.userId.toString());
-    }
-    else{
-        
-        res.send("You are Not Logged In !");
-    }
+    if (req.session && req.session.auth && req.session.auth.userId) {
+       // Load the user object
+       pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err, result) {
+           if (err) {
+              res.status(500).send(err.toString());
+           } else {
+              res.send(result.rows[0].username);    
+           }
+       }
     
+    }
 });
 
 app.get('/logout',function(req,res){
