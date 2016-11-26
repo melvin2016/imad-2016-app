@@ -155,6 +155,7 @@
                         </fieldset>'`;
                     
                         features();
+                        location.reload();
                             
                         }
                 }
