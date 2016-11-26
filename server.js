@@ -62,17 +62,27 @@ function createTemplate(data){
 
 </head>
 <body>
+    <div class="links">
+              <ul id="ul_nav">
+                <li><a class="active" href="/"><img src="http://findicons.com/files/icons/1580/devine_icons_part_2/128/home.png" alt="Home"> Home</a></li>
+                <li><a href="/articles/profile"><img src="https://maxcdn.icons8.com/Share/icon/Users//user_male_circle_filled1600.png" alt="Profile"> Profile</a></li>
+                <li><a href="articles/works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> The Works</a></li>
+                <li ><a  href="/articles/vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a></li>
+                <li><input type="text" id="username" placeholder="Username"></li>
+                <li><input type="password" id="password" placeholder="Password"></li>
+                <li>
+                    
+                   <input type="submit" id="submit_form" Value="Login ">
+                   <span id="logoutArea" ><input type="submit" id="register_user" value="Or Register !"></span>
+                
+                </li>
+                
+              </ul>
+            </div>
 
 
     <div class="container">
-        <div class="links">
-          <ul>
-            <li><a class="active" href="/"><img src="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/home.png" alt="Home"> Home</a></li>
-            <li><a href="profile"><img src="https://4bis.nl/img/profile.png" alt="Profile"> Profile</a></li>
-            <li><a href="works"><img src="http://intu.co.uk/uploads/media/thumbnail/0001/19/thumb_18979_thumbnail_1x.png" alt="Works"> The Works</a></li>
-            <li ><a  href="vision"><img src="http://www.pngall.com/wp-content/uploads/2016/05/Vision-Free-Download-PNG.png" alt="vision">VISION</a></li>
-          </ul>
-        </div>
+        
         <div class="center">
             <img src="/ui/${head_img}" class="img-medium"/>
         </div>
