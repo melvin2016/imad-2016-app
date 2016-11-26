@@ -127,7 +127,7 @@ submit.onclick = function(){
      
 };
 
-var logout = document.getElementById('logout');
+//var logout = document.getElementById('logout');
 logout.onclick = function(){
     var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
