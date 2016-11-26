@@ -206,11 +206,10 @@ app.get('/check-login', function (req, res) {
               res.status(500).send(err.toString());
            } else {
               res.send(result.rows[0].username);
-              res.send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');    
            }
        });
    } else {
-       res.status(400).send('You are not logged in');
+       res.status(400).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');
    }
 });
 
