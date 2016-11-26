@@ -160,6 +160,9 @@ app.post('/login',function(req,res){
     
     var username = req.body.username;
     var password = req.body.password;
+    if(username ||  password === ""){
+        res.status(501).send("Username And Password Cannot Be empty");
+    }else{
     
 
     pool.query('SELECT * FROM "user" WHERE username = $1',[username],function(err,result){
@@ -187,6 +190,7 @@ app.post('/login',function(req,res){
         }
         
     });
+ }
         
 });
 
