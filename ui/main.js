@@ -140,7 +140,7 @@ submit.onclick = function(){
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                             
                         }
-                }else{}
+                }
             }
         request.open('GET','/check-login',true);
         request.send(null);
