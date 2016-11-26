@@ -138,6 +138,18 @@ submit.onclick = function(){
                         
                         loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
+                        opinionBox.innerHTML = `'<fieldset>
+                        <legend>
+                        Your Opinions !
+                        </legend>
+                        <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
+                        Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
+                        &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit !" id="submit_btn"></input>&nbsp;&nbsp;&nbsp;
+    
+                        <ul id="ul_list">
+    
+                        </ul>
+                    </fieldset>'`;
                             
                         }
                 }
@@ -147,6 +159,8 @@ submit.onclick = function(){
         }
         
         isLoggedIn();
+        
+function
         
         
     
