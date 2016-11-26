@@ -168,7 +168,10 @@ function features(){
         
         isLoggedIn();
         
-        
+        if(username && password === ""){
+            alert("Username Or Password Field Is Empty !");
+            
+        }
     
      
  
