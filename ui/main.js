@@ -67,6 +67,7 @@ submit.onclick = function(){
  };
  
  var submit_form = document.getElementById('submit_form');
+ var logoutArea = document.getElementById('logoutArea');
  
  submit_form.onclick = function(){
         var request = new XMLHttpRequest();
@@ -77,7 +78,9 @@ submit.onclick = function(){
                 if(request.status===200){
                     console.log("User is Successfully Logged In !");
                     alert("User is Successfully Logged In !");
-                    submit_form.value="Loggged In !"
+                    submit_form.value="Logged In !"
+                    logoutArea.innerHTML = '<input type="submit" id="logout" value="Logout">';
+                    
                     
                     
                     
@@ -123,3 +126,5 @@ submit.onclick = function(){
  
      
 };
+
+var logout
