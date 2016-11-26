@@ -148,7 +148,7 @@ function features(){
                     //We should do something
                     if(request.status===200){
                         
-                        loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i>';
+                        loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i><br>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         opinionBox.innerHTML = `'<fieldset>
                         <legend>
@@ -162,7 +162,7 @@ function features(){
     
                         </ul>
                         </fieldset>'`;
-                    
+                        location.reload(true);
                         
                         
                         
