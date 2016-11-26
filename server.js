@@ -206,7 +206,6 @@ app.get('/check-login', function (req, res) {
               res.status(500).send(err.toString());
            } else {
               res.send(result.rows[0].username);
-              res.send('<center><img src="http://static1.squarespace.com/static/525f7b73e4b03c6d7aae0718/t/548b4535e4b0e00691d673a9/1475707853815/?format=1000w" alt="Hello There"></center>');
            }
        });
    } else {
