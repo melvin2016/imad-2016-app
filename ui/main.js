@@ -68,6 +68,7 @@ submit.onclick = function(){
  
  var submit_form = document.getElementById('submit_form');
  var logoutArea = document.getElementById('logoutArea');
+ var loginArea = document.getElementById('loginArea');
  
  submit_form.onclick = function(){
         var request = new XMLHttpRequest();
