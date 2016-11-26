@@ -152,6 +152,6 @@ logout.onclick = function(){
         }
     request.open('POST','/logout' , true);
     res.send(null);
-    
+    logout.value="Logging Out !";
     
 };
