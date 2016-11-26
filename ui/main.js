@@ -103,7 +103,7 @@ function features(){
         request.open('POST','/login' , true);
         request.setRequestHeader('Content-Type','application/json');
         request.send(JSON.stringify({username:username,password:password}));
-        submit_form.value="Logging In...";
+        submit_form.value="Wait..";
      };
      
      var register_user = document.getElementById('register_user');
