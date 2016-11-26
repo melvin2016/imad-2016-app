@@ -169,7 +169,7 @@ function features(){
         isLoggedIn();
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
-if(username && password === ""){
+if(username ||  password === ""){
     alert("Username Or Password Field Is Empty !");
             
      }
