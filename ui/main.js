@@ -75,7 +75,7 @@ function features(){
    var logoutArea = document.getElementById('logoutArea');
      
      
-     submit_form.onclick = function login(){
+     submit_form.onclick = function(){
          if(username ||  password === ""){
             alert("Username Or Password Field Is Empty !");
     
