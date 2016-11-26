@@ -127,4 +127,31 @@ submit.onclick = function(){
      
 };
 
-var logout
+var logout = document.getElementById('logout');
+logout.onclick = function(){
+    var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            
+            if(request.readyState===XMLHttpRequest.DONE){
+                //We should do something
+                if(request.status===200){
+                    console.log("User Successfully Logged Out");
+                    alert("User Successfully Logged Out");
+                    submit_form.value="Login !"
+                    logoutArea.innerHTML = '<input type="submit" id="register_user" value="Or Register !">';
+                    
+                    
+                    
+                    
+                }
+                else if(request.status===500){
+                    alert("Something Went Wrong In The server ! ");
+                }
+                
+            }
+        }
+    request.open('POST','/logout' , true);
+    res.send(null);
+    
+    
+};
