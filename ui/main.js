@@ -1,5 +1,4 @@
-var username = document.getElementById('username').value;
-var password = document.getElementById('password').value;
+
 //counter variable and function 
 var button = document.getElementById('counter');
 var counter=0;
@@ -80,6 +79,7 @@ submit.onclick = function(){
                     alert("User is Successfully Logged In !");
                     
                     
+                    
                 }else if(request.status === 403){
                     alert("Invalid username Or Password!");
                 }else if(request.status===500){
@@ -88,6 +88,8 @@ submit.onclick = function(){
                 
             }
         };
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;    
 
     request.open('POST','/login' , true);
     request.setRequestHeader('Content-Type','application/json');
@@ -110,6 +112,8 @@ submit.onclick = function(){
             }
         }
     };
+ var username = document.getElementById('username').value;
+ var password = document.getElementById('password').value;
  request.open('POST','/create-user' , true);
  request.setRequestHeader('Content-Type','application/json');
  request.send(JSON.stringify({username:username,password:password}));
