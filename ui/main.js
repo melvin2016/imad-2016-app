@@ -86,19 +86,8 @@ function features(){
                         alert("User is Successfully Logged In !");
                         loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
-                        if(features()){
-                            location.reload(true);
-                        }
-                        
-                        var div = document.getElementById('userAndPass');
-                        while(div.firstChild){
-                         div.removeChild(div.firstChild);
-                            }
-                        
-                        
-                        
-                        
-                        
+                        features()
+                        location.reload(true);
                         
                     }else if(request.status === 403){
                         alert("Invalid username Or Password!");
