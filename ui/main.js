@@ -65,11 +65,12 @@ submit.onclick = function(){
      
      
  };
+ var loginArea = document.getElementById('loginArea');
  
  function loadLoginForm(){
-       var submit_form = document.getElementById('submit_form');
+     var submit_form = document.getElementById('submit_form');
      var logoutArea = document.getElementById('logoutArea');
-     var loginArea = document.getElementById('loginArea');
+     
      
      submit_form.onclick = function login(){
             var request = new XMLHttpRequest();
@@ -137,7 +138,7 @@ function loadLogin () {
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
+                 loginArea.innerHTMl = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
             } else {
                 loadLoginForm();
             }
