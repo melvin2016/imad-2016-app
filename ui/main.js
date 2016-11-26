@@ -155,7 +155,7 @@
                         </fieldset>'`;
                     
                         features()
-                        window.location.reload(true);
+                        
                         
                             
                         }
