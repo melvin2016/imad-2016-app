@@ -213,7 +213,7 @@ app.get('/', function (req, res) {
 
 
 app.get('/ui/:filename', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', filename));
+  res.sendFile(path.join(__dirname, 'ui', req.params.filename));
 });
 
 /*app.get('/ui/main.js', function (req, res) {
