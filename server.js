@@ -207,7 +207,7 @@ app.get('/check-login',function(req,res){
            } else {
               res.send(result.rows[0].username);    
            }
-        };
+        });
    }
 });
 
