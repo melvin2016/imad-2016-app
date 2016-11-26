@@ -92,7 +92,7 @@ function features(){
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                          
                         userAndPass.innerHTML="";
-                        location.reload();
+                        
                         features();
                         
                         
@@ -164,6 +164,7 @@ function features(){
     
                         </ul>
                         </fieldset>'`;
+                        opinionBox.reload();
                         
                         
                         
