@@ -65,7 +65,7 @@ submit.onclick = function(){
      
      
  };
-  var loginArea = document.getElementById('loginArea');
+    var loginArea = document.getElementById('loginArea');
  
 
      var submit_form = document.getElementById('submit_form');
