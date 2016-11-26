@@ -1,6 +1,6 @@
 
 //counter variable and function 
-
+var userAndPass = document.getElementById('userAndPass'); 
 
 function features(){
         var button = document.getElementById('counter');
@@ -89,6 +89,10 @@ function features(){
                         if(features()){
                             location.reload(true);
                         }
+                        
+                        userAndPass.innerHTML="";
+                        
+                        
                         
                         
                         
