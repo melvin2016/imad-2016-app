@@ -1,5 +1,7 @@
 
 //counter variable and function 
+
+
 function features(){
         var button = document.getElementById('counter');
         var counter=0;
