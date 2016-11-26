@@ -150,7 +150,7 @@ logout.onclick = function(){
                 
             }
         }
-    request.open('POST','/logout' , true);
+    request.open('GET','/logout' , true);
     res.send(null);
     logout.value="Logging Out !";
     
