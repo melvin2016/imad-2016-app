@@ -77,6 +77,7 @@ submit.onclick = function(){
                 if(request.status===200){
                     console.log("User is Successfully Logged In !");
                     alert("User is Successfully Logged In !");
+                    submit_form.value.innerHTML = "Log Out !"
                     
                 }else if(request.status === 403){
                     alert("Invalid username Or Password!");
