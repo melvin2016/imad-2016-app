@@ -76,6 +76,11 @@ function features(){
      
      
      submit_form.onclick = function login(){
+         if(username ||  password === ""){
+            alert("Username Or Password Field Is Empty !");
+    
+            
+         }else{
             var request = new XMLHttpRequest();
             request.onreadystatechange = function(){
                 
@@ -97,6 +102,7 @@ function features(){
                     
                 }
             };
+         }
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;    
     
@@ -169,11 +175,7 @@ function features(){
         isLoggedIn();
 var username = document.getElementById('username').value;
 var password = document.getElementById('password').value;
-if(username ||  password === ""){
-    alert("Username Or Password Field Is Empty !");
-    
-            
-     }
+
     
      
  
