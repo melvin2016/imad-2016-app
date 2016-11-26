@@ -88,7 +88,7 @@ function features(){
                     if(request.status===200){
                         console.log("User is Successfully Logged In !");
                         alert("User is Successfully Logged In !");
-                        loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
+                        loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         features(); 
                         userAndPass.innerHTML="";
