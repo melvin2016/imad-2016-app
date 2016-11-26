@@ -65,11 +65,9 @@ submit.onclick = function(){
      
      
  };
-    var loginArea = document.getElementById('loginArea');
- 
-
-     var submit_form = document.getElementById('submit_form');
-     var logoutArea = document.getElementById('logoutArea');
+   var loginArea = document.getElementById('loginArea');
+   var submit_form = document.getElementById('submit_form');
+   var logoutArea = document.getElementById('logoutArea');
      
      
      submit_form.onclick = function login(){
@@ -129,6 +127,29 @@ submit.onclick = function(){
      
          
     };  
+    
+    function isLoggedIn(){
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+                
+                if(request.readyState===XMLHttpRequest.DONE){
+                    //We should do something
+                    if(request.status===200){
+                        
+                        loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
+                        
+                            
+                        }
+                }else{}
+            }
+        request.open('GET','/check-login',true);
+        request.send(null);
+        }
+        
+        isLoggedIn();
+        
+        
+    
      
  
  
