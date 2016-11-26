@@ -1,4 +1,4 @@
-
+var currentArticleTitle = window.location.pathname.split('/')[2];
 //counter variable and function 
 var button = document.getElementById('counter');
 var counter=0;
@@ -60,7 +60,7 @@ submit.onclick = function(){
     };
     var inputComment = document.getElementById('input_comment');
     var comment = inputComment.value;
-    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment?comment='+comment,true);
+    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment'+currentArticleTitle,true);
     request.send(null);
      
      
