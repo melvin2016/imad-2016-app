@@ -153,7 +153,7 @@
                         </ul>
                         </fieldset>'`;
                     
-                        counterBtn();
+                        features();
                             
                         }
                 }
