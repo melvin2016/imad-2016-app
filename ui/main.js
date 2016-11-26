@@ -70,7 +70,7 @@ submit.onclick = function(){
  var logoutArea = document.getElementById('logoutArea');
  var loginArea = document.getElementById('loginArea');
  
- submit_form.onclick = function(){
+ submit_form.onclick = function login(){
         var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
             
@@ -103,7 +103,7 @@ submit.onclick = function(){
  };
  
  var register_user = document.getElementById('register_user');
- register_user.onclick = function(){
+ register_user.onclick = function register(){
      var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
             
@@ -128,3 +128,8 @@ submit.onclick = function(){
      
 };
 
+
+if(req.session && req.session.auth && req.session.auth.userId){
+    login();
+    
+}
