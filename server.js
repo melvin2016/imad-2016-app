@@ -208,7 +208,7 @@ app.get('/check-login',function(req,res){
               res.send(result.rows[0].username);    
            }
         });
-   }
+   }else{res.send("error");}
 });
 
 app.get('/logout',function(req,res){
