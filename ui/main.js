@@ -3,7 +3,7 @@
 var userAndPass = document.getElementById('userAndPass'); 
 
 function features(){
-        var button = document.getElementById('counter');
+     var rtu=`   var button = document.getElementById('counter');
         var counter=0;
         button.onclick = function(){
             
@@ -67,7 +67,8 @@ function features(){
         request.send(null);
          
          
-     };
+     };`
+     return rtu;
   }
   
    var loginArea = document.getElementById('loginArea');
