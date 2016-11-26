@@ -77,6 +77,7 @@ submit.onclick = function(){
                 if(request.status===200){
                     console.log("User is Successfully Logged In !");
                     alert("User is Successfully Logged In !");
+                    submit_form.value="Loggged In !"
                     
                     
                     
@@ -94,7 +95,7 @@ submit.onclick = function(){
     request.open('POST','/login' , true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username:username,password:password}));
-    submit_form.value="Submitting...";
+    submit_form.value="Logging In...";
  };
  
  var register_user = document.getElementById('register_user');
@@ -106,6 +107,7 @@ submit.onclick = function(){
                 //We should do something
                 if(request.status===200){
                     alert('User Succesfully Created !');
+                    register_user.value = 'Registered!';
                     
             }else{
                 alert('Something Wrong With The Server !');
