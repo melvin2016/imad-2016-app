@@ -164,7 +164,7 @@ function features(){
     
                         </ul>
                         </fieldset>'`;
-                        opinionBox.reload();
+                        
                         
                         
                         
