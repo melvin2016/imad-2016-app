@@ -94,6 +94,7 @@ function features(){
                         userAndPass.innerHTML="";
                         
                         features();
+                        location.reload(true);
                         
                         
                     }else if(request.status === 403){
