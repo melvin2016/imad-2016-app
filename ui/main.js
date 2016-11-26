@@ -154,7 +154,8 @@
                         </ul>
                         </fieldset>'`;
                     
-                        features().reload(true);
+                        features()
+                        window.location.reload(true);
                         
                             
                         }
