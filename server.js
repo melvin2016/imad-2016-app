@@ -205,7 +205,7 @@ app.get('/check-login', function (req, res) {
            if (err) {
               res.status(500).send(err.toString());
            } else {
-              res.send(result.rows[0].username);    
+              res.send(result.rows[0].username).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');    
            }
        });
    } else {
@@ -216,6 +216,13 @@ app.get('/check-login', function (req, res) {
 app.get('/logout',function(req,res){
     delete req.session.auth;
     res.send('<center><img src="http://www.carshowsafari.com/images/logged_out/successfully-logged-out.png" alt="successfully logged Out !"><br><a href="http://melvin2016.imad.hasura-app.io/">Go To Home Page !</a><center>');
+});
+
+app.get('/comments',function(req,res){
+    
+    
+    
+    
 });
 //For Home Page
 app.get('/', function (req, res) {
