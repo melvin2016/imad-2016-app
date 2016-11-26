@@ -3,6 +3,7 @@
 var userAndPass = document.getElementById('userAndPass'); 
 
 function features(){
+       var ret =`
         var button = document.getElementById('counter');
         var counter=0;
         button.onclick = function(){
@@ -67,7 +68,8 @@ function features(){
         request.send(null);
          
          
-     };
+     };`
+     return ret;
      
   }
   
