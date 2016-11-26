@@ -154,7 +154,7 @@
                         </ul>
                         </fieldset>'`;
                     
-                        features()
+                        features();
                         
                         
                             
