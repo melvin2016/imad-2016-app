@@ -92,7 +92,7 @@ function features(){
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         features(); 
                         userAndPass.innerHTML="";
-                        location.reload(true);
+                        
                         
                     }else if(request.status === 403){
                         alert("Invalid username Or Password!");
