@@ -162,7 +162,7 @@ function features(){
     
                         </ul>
                         </fieldset>'`;
-                        location.reload(true);
+                        
                         
                         
                         
