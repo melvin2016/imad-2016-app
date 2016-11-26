@@ -90,7 +90,10 @@ function features(){
                             location.reload(true);
                         }
                         
-                        userAndPass.innerHTML="";
+                        var div = document.getElementById('userAndPass');
+                        while(div.firstChild){
+                         div.removeChild(div.firstChild);
+                            }
                         
                         
                         
