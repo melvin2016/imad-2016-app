@@ -68,6 +68,7 @@ submit.onclick = function(){
  };
  
  var submit_form = document.getElementById('submit_form');
+ var submit_value = document.getElementById('submit_form').value;
  submit_form.onclick = function(){
         var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
@@ -77,7 +78,7 @@ submit.onclick = function(){
                 if(request.status===200){
                     console.log("User is Successfully Logged In !");
                     alert("User is Successfully Logged In !");
-                    submit_form.value.innerHTML = "Log Out !"
+                    submit_value.innerHTML = "Log Out !"
                     
                 }else if(request.status === 403){
                     alert("Invalid username Or Password!");
