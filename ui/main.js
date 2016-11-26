@@ -101,7 +101,7 @@ function features(){
                     }else if(request.status===500){
                         alert("Something Went Wrong In The server ! ");
                     }else if(request.status===501){
-                        alert("Username And Passoword Filed can't be Empty!");
+                        alert("Username And Password Field can't be Empty!");
                     }
                     
                 }
