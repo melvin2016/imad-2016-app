@@ -160,8 +160,6 @@ submit.onclick = function(){
         
         isLoggedIn();
         
-function
-        
         
     
      
