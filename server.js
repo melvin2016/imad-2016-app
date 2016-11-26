@@ -184,7 +184,7 @@ app.post('/login',function(req,res){
                 var hashedP = hash(password,salt);
                 if(hashedP === dbString  ){
                     req.session.auth = {userId:result.rows[0].id};
-                    res.send("Creadentials Are Correct !").send(username);
+                    res.send(username);
                   }else{
                      res.send(403).send('username/password is invalid !');
                  } 
