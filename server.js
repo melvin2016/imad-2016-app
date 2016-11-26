@@ -215,7 +215,7 @@ app.get('/check-login', function (req, res) {
 
 app.get('/logout',function(req,res){
     delete req.session.auth;
-    res.send('<center>Successfully logged Out !<br><a href="http://melvin2016.imad.hasura-app.io/">Go To Home Page !</a><center>');
+    res.send('<center><img src="http://www.carshowsafari.com/images/logged_out/successfully-logged-out.png" alt="successfully logged Out !"><br><a href="http://melvin2016.imad.hasura-app.io/">Go To Home Page !</a><center>');
 });
 //For Home Page
 app.get('/', function (req, res) {
