@@ -245,13 +245,13 @@ app.get('/loadComments',function(req,res){
                 
             }else{
                 
-                for(var i = 0 ; i<result.rows ; i++){
+                for(var i = 0 ; i<result.rows.length ; i++){
                     
-                    var comments[] += result.rows[i].comment;
+                    // comments[] += result.rows[i].comment;
                     
                     
                 }
-                res.status(200).send(JSON.stringify(comments));
+                res.status(200).send(JSON.stringify(result.rows.length));
             }
             
         });
