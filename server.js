@@ -247,11 +247,11 @@ app.get('/loadComments',function(req,res){
                 
                 for(var i = 0 ; i<result.rows.length ; i++){
                     
-                    // comments[] += result.rows[i].comment;
+                     comments += [result.rows[i].comment];
                     
                     
                 }
-                res.status(200).send(JSON.stringify(result.rows.length));
+                res.status(200).send(JSON.stringify());
             }
             
         });
