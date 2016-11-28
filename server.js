@@ -244,14 +244,14 @@ app.get('/loadComments',function(req,res){
                 res.send(err.toString());
                 
             }else{
-                comments=[];
+                var comments=[];
                 for(var i = 0 ; i<result.rows ; i++){
                     
-                    
+                    comments += result.rows[i].comment;
                     
                     
                 }
-                res.status(200).send(JSON.stringify(result.rows.comment));
+                res.status(200).send(JSON.stringify(comments));
             }
             
         });
