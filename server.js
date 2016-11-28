@@ -244,8 +244,9 @@ app.get('/loadComments',function(req,res){
                 res.send(err.toString());
                 
             }else{
-                
+                for(var i=0;i<result.rows; i++){
                 res.status(200).send(JSON.stringify(result.rows[0].comment));
+                }
                 
             }
             
