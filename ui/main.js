@@ -198,10 +198,7 @@ var register_user = document.getElementById('register_user');
                         
                         
                         
-                        return true;
-                            
-                        }else{
-                            return false;
+                        
                             
                         }
                 }
