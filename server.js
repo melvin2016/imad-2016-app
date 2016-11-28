@@ -239,7 +239,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
             }
        });     
     } else {
-        res.status(403).send('Only logged in users can comment');
+        
     }
 });
 
@@ -250,14 +250,14 @@ app.post('/comments',function(req,res){
             if(err){
                 res.status(500).send("Internal Server Error");
             }else{
-                res.send("comment inserted Successfully!");
+                res.status(200).send('Comment inserted!')
             }
             
         });
         
     }else{
         
-        res.status(403).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');
+        res.status(403).send('Only logged in users can comment');
     }
     
     
