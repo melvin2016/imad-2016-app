@@ -147,15 +147,17 @@ var register_user = document.getElementById('register_user');
                             if(request.status===200){
                                 
                                 console.log("Comment Inserted!");
+                                
                             }else{console.log("Not Done");}
                             
                         }
                         
                     };
-                    var comment = document.getElementById('input_comment').value;
+                    var commentValue = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment}));
+                    request.send(JSON.stringify({comment:commentValue}));
+                    
                      
                      
                  };
