@@ -84,6 +84,30 @@ var register_user = document.getElementById('register_user');
          
     };  
     
+    function loadComments(){
+        
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            
+            if(request.readyState===XMLHttpRequest.DONE){
+                if(request.status === 200){
+                    
+                    var comments = request.responseText;
+                    commentList="";
+                    for(var i = 0; i<comments.length ; i++){
+                        commentList += "<li>"+comments[i]+"</li>";
+                    }
+                    ul_list.innerHTML = commentList;
+                }
+                
+            }
+        };
+        var ul_list = document.getElementById('ul_list');
+        request.open('POST','/loadComments',true);
+        request.send(null);
+        
+    }
+    
     function isLoggedIn(){
         var request = new XMLHttpRequest();
         request.onreadystatechange = function(){
