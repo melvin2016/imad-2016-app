@@ -93,7 +93,7 @@ var register_user = document.getElementById('register_user');
                 if(request.status === 200){
                     
                     var comments = request.responseText;
-                    ul_list.innerHTML = comments;
+                    ul_list.innerHTML = comments[1];
                     /*commentList="";
                     for(var i = 0; i<comments.length ; i++){
                         commentList += "<li>"+comments[i]+"</li>";
