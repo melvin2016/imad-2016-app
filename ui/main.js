@@ -93,12 +93,11 @@ var register_user = document.getElementById('register_user');
                 if(request.status === 200){
                     
                     var comments = JSON.parse(request.responseText);
-                    ul_list.innerHTML = comments[1];
-                    /*commentList="";
+                    commentList="";
                     for(var i = 0; i<comments.length ; i++){
                         commentList += "<li>"+comments[i]+"</li>";
                     }
-                    ul_list.innerHTML = commentList;*/
+                    ul_list.innerHTML = commentList;
                 }
                 
             }
