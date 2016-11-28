@@ -146,8 +146,8 @@ var comment = document.getElementById('input_comment');
                             //We should do something
                             if(request.status===200){
                                 
-                                console.log("Comment Inserted!")
-                            }else{console.log("Not Done")}
+                                console.log("Comment Inserted!");
+                            }else{console.log("Not Done");}
                             
                         }
                         
