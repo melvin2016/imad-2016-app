@@ -244,7 +244,7 @@ app.post('/submit-comment/:articleName', function (req, res) {
 });
 
 app.post('/comments',function(req,res){
-    if(req.session && req.session.auth && req.session.userId){
+    if(true){
         
         pool.query('INSERT INTO "comments" (comment) VALUES $1',[req.body.comment],function(err,result){
             if(err){
