@@ -50,7 +50,10 @@ var register_user = document.getElementById('register_user');
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
-                        loadComments();
+                        if(isLoggedIn()){
+                            loadComments();
+                        }
+                        
                          location.reload(true);
                          
                          
