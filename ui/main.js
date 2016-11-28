@@ -24,6 +24,7 @@ var register_user = document.getElementById('register_user');
                         alert("User is Successfully Logged In !");
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
+                        userAndPass.innerHTML="";
                          
                         
                         
@@ -104,7 +105,7 @@ var register_user = document.getElementById('register_user');
     
                         </ul>
                         </fieldset>'`;
-                        userAndPass.innerHTML="";
+                        
                                 var button = document.getElementById('counter');
                     var counter=0;
                     button.onclick = function(){
