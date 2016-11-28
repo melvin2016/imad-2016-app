@@ -1,6 +1,7 @@
 
 //counter variable and function 
 var userAndPass = document.getElementById('userAndPass'); 
+var register_user = document.getElementById('register_user');
 
 
 
@@ -32,12 +33,14 @@ var userAndPass = document.getElementById('userAndPass');
                         
                     }else if(request.status === 403){
                         alert("Invalid username Or Password!");
+                        submit_form.value="Login";
                     }else if(request.status===500){
                         alert("Something Went Wrong In The server ! ");
-                        register_user.value = 'Register';
+                        register_user.value = 'Login';
                         
                     }else if(request.status===501){
                         alert("Username And Password Field can't be Empty!");
+                        submit_form.value="Login";
                     }
                     
                 }
@@ -52,7 +55,7 @@ var userAndPass = document.getElementById('userAndPass');
         submit_form.value="Wait..";
      };
      
-     var register_user = document.getElementById('register_user');
+    
      register_user.onclick = function register(){
          var request = new XMLHttpRequest();
             request.onreadystatechange = function(){
@@ -65,6 +68,7 @@ var userAndPass = document.getElementById('userAndPass');
                         
                 }else{
                     alert('Something Wrong With The Server !');
+                    register_user.value = 'Register';
                 }
             }
         };
