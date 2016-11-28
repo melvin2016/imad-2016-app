@@ -11,6 +11,23 @@ var register_user = document.getElementById('register_user');
    var loginArea = document.getElementById('loginArea');
    var submit_form = document.getElementById('submit_form');
    var logoutArea = document.getElementById('logoutArea');
+   function buttons(){
+        
+        htmlButtons = `'<fieldset>
+                        <legend>
+                        Your Opinions !
+                        </legend>
+                        <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
+                        Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
+                        &nbsp;&nbsp;&nbsp;<input type="submit" value="Add New Comment" id="submit_btn"></input>&nbsp;&nbsp;&nbsp;
+    
+                        <ul id="ul_list">
+    
+                        </ul>
+                        </fieldset>'`;
+        return htmlButtons ;
+    }
+
    function likeAndComment(){
                         var button = document.getElementById('counter');
                     var counter=0;
@@ -170,7 +187,7 @@ var register_user = document.getElementById('register_user');
          
     };  
     
-
+    
     
     function isLoggedIn(){
         var request = new XMLHttpRequest();
@@ -182,18 +199,7 @@ var register_user = document.getElementById('register_user');
                         
                         loginArea.innerHTML = '<div style="color:yellow"><bold>Hi <bold><i>'+request.responseText+'<i><br>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
-                        opinionBox.innerHTML = `'<fieldset>
-                        <legend>
-                        Your Opinions !
-                        </legend>
-                        <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
-                        Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
-                        &nbsp;&nbsp;&nbsp;<input type="submit" value="Add New Comment" id="submit_btn"></input>&nbsp;&nbsp;&nbsp;
-    
-                        <ul id="ul_list">
-    
-                        </ul>
-                        </fieldset>'`;
+                        opinionBox.innerHTML = buttons();
                         userAndPass.innerHTML="";
                         likeAndComment();
                     }
