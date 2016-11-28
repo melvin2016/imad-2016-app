@@ -157,7 +157,8 @@ var register_user = document.getElementById('register_user');
         request.open('POST','/login' , true);
         request.setRequestHeader('Content-Type','application/json');
         request.send(JSON.stringify({username:username,password:password}));
-        submit_form.value="Wait..";
+        //submit_form.value="Wait..";
+        $('submit_form').delay(800).fadeOut(200).fadeIn(300).text('Wait!')
      };
      
     
