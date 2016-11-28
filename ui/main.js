@@ -34,6 +34,8 @@ var userAndPass = document.getElementById('userAndPass');
                         alert("Invalid username Or Password!");
                     }else if(request.status===500){
                         alert("Something Went Wrong In The server ! ");
+                        register_user.value = 'Register';
+                        
                     }else if(request.status===501){
                         alert("Username And Password Field can't be Empty!");
                     }
