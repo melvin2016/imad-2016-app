@@ -244,10 +244,10 @@ app.get('/loadComments',function(req,res){
                 res.send(err.toString());
                 
             }else{
-                
+                comments=[null];
                 for(var i = 0 ; i<result.rows.length ; i++){
                     
-                     comments += [result.rows[i].comment];
+                     comments.push(result.rows[i].comment);
                     
                     
                 }
