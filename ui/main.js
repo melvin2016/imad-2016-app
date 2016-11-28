@@ -157,6 +157,9 @@ var register_user = document.getElementById('register_user');
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
                     request.send(JSON.stringify({comment:commentValue}));
+                    var submit = document.getElementById('submit_btn');
+                    submit.value="Submitting..";
+                    
                     
                      
                      
