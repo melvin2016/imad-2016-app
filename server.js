@@ -244,7 +244,7 @@ app.get('/loadComments',function(req,res){
                 res.send(err.toString());
                 
             }else{
-                comments=[null];
+                comments=[];
                 for(var i = 0 ; i<result.rows.length ; i++){
                     
                      comments.push(result.rows[i].comment);
