@@ -248,7 +248,7 @@ app.post('/comments',function(req,res){
         
         pool.query('INSERT INTO comments (comment) VALUES $1',[req.body.comment],function(err,result){
             if(err){
-                res.status(500).send("Internal Server Error");
+                res.status(500).send(err.toString());
             }else{
                 res.status(200).send('Comment inserted!');
             }
