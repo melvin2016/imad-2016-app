@@ -50,9 +50,9 @@ var register_user = document.getElementById('register_user');
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
-                        if(isLoggedIn()){
-                            loadComments();
-                        }
+                        likeAndComment();
+                        loadComments();
+                        
                         
                          location.reload(true);
                          
@@ -133,8 +133,28 @@ var register_user = document.getElementById('register_user');
                         </ul>
                         </fieldset>'`;
                         userAndPass.innerHTML="";
+                        likeAndComment();
+                    
+
                         
-                                var button = document.getElementById('counter');
+                        
+                        
+                        
+                        
+                        
+                            
+                        }
+                }
+            };
+        request.open('GET','/check-login',true);
+        request.send(null);
+        return true;
+        }
+        
+        isLoggedIn();
+        
+        function likeAndComment(){
+                        var button = document.getElementById('counter');
                     var counter=0;
                     button.onclick = function(){
                         
@@ -192,23 +212,7 @@ var register_user = document.getElementById('register_user');
                      
                      
                  };
-
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        }
-                }
-            }
-        request.open('GET','/check-login',true);
-        request.send(null);
-        return true;
         }
-        
-        isLoggedIn();
 
     
      
