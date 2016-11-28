@@ -274,7 +274,7 @@ app.get('/loadComments',function(req,res){
                 
             }else{
                 
-                res.status(200).send(JSON.stringify(res.rows[0].comment));
+                res.status(200).send(JSON.stringify(result.rows[0].comment));
                 
             }
             
