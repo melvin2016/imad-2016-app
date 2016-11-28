@@ -262,6 +262,30 @@ app.post('/comments',function(req,res){
     
     
 });
+
+app.get('/loadComments',function(req,res){
+    
+    if(req.session && req.session.auth && req.session.auth.userId){
+        
+        pool.query('SELECT * FROM comments',function(err,result){
+            
+            if(err){
+                res.send(err.toString());
+                
+            }else{
+                
+                res.status(200).send(JSON.stringify(res.rows[0].comment));
+                
+            }
+            
+        });
+        
+    }else{
+        
+        res.status(403).send('Not Found !');
+    }
+    
+});
 //For Home Page
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
