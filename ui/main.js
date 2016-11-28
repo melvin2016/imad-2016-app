@@ -46,12 +46,13 @@ var register_user = document.getElementById('register_user');
                     //We should do something
                     if(request.status===200){
                         console.log("User is Successfully Logged In !");
+                        likeAndComment();
+                        loadComments();
                         alert("User is Successfully Logged In !");
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
-                        likeAndComment();
-                        loadComments();
+                        
                         
                         
                          location.reload(true);
@@ -134,16 +135,7 @@ var register_user = document.getElementById('register_user');
                         </fieldset>'`;
                         userAndPass.innerHTML="";
                         likeAndComment();
-                    
-
-                        
-                        
-                        
-                        
-                        
-                        
-                            
-                        }
+                    }
                 }
             };
         request.open('GET','/check-login',true);
