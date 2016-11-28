@@ -212,36 +212,7 @@ app.get('/logout',function(req,res){
     res.send('<center><img src="http://www.carshowsafari.com/images/logged_out/successfully-logged-out.png" alt="successfully logged Out !"><br><a href="http://melvin2016.imad.hasura-app.io/">Go To Home Page !</a><center>');
 });
 
-app.post('/submit-comment/:articleName', function (req, res) {
-   // Check if the user is logged in
-    if (req.session && req.session.auth && req.session.auth.userId) {
-        // First check if the article exists and get the article-id
-        pool.query('SELECT * FROM articles WHERE title = $1', [req.params.articleName], function (err, result) {
-            if (err) {
-                res.status(500).send(err.toString());
-            } else {
-                if (result.rows.length === 0) {
-                    res.status(400).send('Article not found');
-                } else {
-                    var articleId = result.rows[0].id;
-                    // Now insert the right comment for this article
-                    pool.query(
-                        "INSERT INTO comments (comment, article_id, user_id) VALUES ($1, $2, $3)",
-                        [req.body.comment, articleId, req.session.auth.userId],
-                        function (err, result) {
-                            if (err) {
-                                res.status(500).send(err.toString());
-                            } else {
-                                res.status(200).send('Comment inserted!')
-                            }
-                        });
-                }
-            }
-       });     
-    } else {
-        
-    }
-});
+
 
 app.post('/comments',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
