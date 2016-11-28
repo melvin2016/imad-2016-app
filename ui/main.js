@@ -105,6 +105,7 @@ var register_user = document.getElementById('register_user');
     
                         </ul>
                         </fieldset>'`;
+                        userAndPass.innerHTML="";
                         
                                 var button = document.getElementById('counter');
                     var counter=0;
