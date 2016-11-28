@@ -130,6 +130,26 @@ app.get('/articles/:articlename', function (req, res) {
     });
 });
 
+app.post('/comments',function(req,res){
+    if(req.session && req.session.auth && req.session.userId){
+        
+        pool.query('INSERT INTO "comments" (comment) VALUES $1',[req.body.comment],function(err,result){
+            if(err){
+                res.status(500).send("Internal Server Error");
+            }else{
+                res.send("comment inserted Successfully!");
+            }
+            
+        });
+        
+    }else{
+        
+        res.status(400).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');
+    }
+    
+    
+});
+
 function hash(string,salt){
     var hash = crypto.pbkdf2Sync(string, salt, 100000, 512, 'sha512');
     return ["pbkdf2","100000",salt,hash.toString('hex')].join('$');
