@@ -257,7 +257,7 @@ app.post('/comments',function(req,res){
         
     }else{
         
-        res.status(400).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');
+        res.status(403).send('<center><img src="http://cdn.appthemes.com/wp-content/uploads/2013/03/not-logged-in.png" alt="Not Logged In !"></center>');
     }
     
     
