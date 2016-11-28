@@ -147,6 +147,7 @@ var register_user = document.getElementById('register_user');
                             if(request.status===200){
                                 
                                 console.log("Comment Inserted!");
+                                submit.value="Add New Comment";
                                 
                             }else{console.log("Not Done");}
                             
