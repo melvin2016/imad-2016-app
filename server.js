@@ -257,7 +257,7 @@ app.post('/comments',function(req,res){
         
     }else{
         
-        res.status(404).send('Only logged in users can comment');
+        res.status(403).send('Only logged in users can comment');
     }
     
     
