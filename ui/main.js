@@ -92,8 +92,8 @@ var register_user = document.getElementById('register_user');
             if(request.readyState===XMLHttpRequest.DONE){
                 if(request.status === 200){
                     
-                    var comments = request.responseText;
-                    ul_list.innerHTML = comments[1];
+                    var comments = JSON.parse(request.responseText);
+                    ul_list.innerHTML = comments;
                     /*commentList="";
                     for(var i = 0; i<comments.length ; i++){
                         commentList += "<li>"+comments[i]+"</li>";
