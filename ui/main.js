@@ -2,6 +2,7 @@
 //counter variable and function 
 var userAndPass = document.getElementById('userAndPass'); 
 var register_user = document.getElementById('register_user');
+var comment = document.getElementById('input_comment');
 
 
 
@@ -144,31 +145,16 @@ var register_user = document.getElementById('register_user');
                         if(request.readyState===XMLHttpRequest.DONE){
                             //We should do something
                             if(request.status===200){
-                                var comments = request.responseText;
                                 
-                                
-                                comments = JSON.parse(comments);
-                                
-                                
-                                var list='';
-                     
-                                for(i=0; i < comments.length ; i++){
-                         
-                                 list += '<li>'+comments[i]+'</li>';
-                         
-                                 }
-                     
-                                ul_list.innerHTML = "<br>Comments:"+list;
-                                
-                            }
+                                console.log("Comment Inserted!")
+                            }else{console.log("Not Done")}
                             
                         }
                         
                     };
-                    var inputComment = document.getElementById('input_comment');
-                    var comment = inputComment.value;
-                    request.open('GET','http://melvin2016.imad.hasura-app.io/submit-comment'+currentArticleTitle,true);
-                    request.send(null);
+                    request.open('POST','/comments',true);
+                    request.setRequestHeader('Content-Type','application/json');
+                    request.send(JSON.stringify({comment:comment}));
                      
                      
                  };
