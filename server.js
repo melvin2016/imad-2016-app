@@ -251,7 +251,7 @@ app.get('/loadComments',function(req,res){
                     
                     
                 }
-                res.status(200).send(JSON.stringify());
+                res.status(200).send(JSON.stringify(comments));
             }
             
         });
