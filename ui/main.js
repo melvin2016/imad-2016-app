@@ -133,6 +133,7 @@ var register_user = document.getElementById('register_user');
                         
                         
                          location.reload(true);
+                         isLoggedIn();
                          
                          
                     }else if(request.status === 403){
