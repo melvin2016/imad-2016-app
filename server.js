@@ -250,7 +250,7 @@ app.post('/comments',function(req,res){
             if(err){
                 res.status(500).send("Internal Server Error");
             }else{
-                res.status(200).send('Comment inserted!')
+                res.status(200).send('Comment inserted!');
             }
             
         });
