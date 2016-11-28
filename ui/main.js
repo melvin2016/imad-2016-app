@@ -100,7 +100,7 @@ var register_user = document.getElementById('register_user');
                         </legend>
                         <div style="color:#dd4b39"><button id="counter">Like <3 !</button> <span id="count"> 0 </span>&nbsp;Likes !</div><br>
                         Your Comments here !&nbsp; : &nbsp;&nbsp;<input type="text" Placeholder="Enter Comment Here !" id="input_comment">
-                        &nbsp;&nbsp;&nbsp;<input type="submit" value="Submit !" id="submit_btn"></input>&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;<input type="submit" value="Add New Comment" id="submit_btn"></input>&nbsp;&nbsp;&nbsp;
     
                         <ul id="ul_list">
     
