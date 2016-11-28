@@ -11,6 +11,66 @@ var register_user = document.getElementById('register_user');
    var loginArea = document.getElementById('loginArea');
    var submit_form = document.getElementById('submit_form');
    var logoutArea = document.getElementById('logoutArea');
+   function likeAndComment(){
+                        var button = document.getElementById('counter');
+                    var counter=0;
+                    button.onclick = function(){
+                        
+                        var request = new XMLHttpRequest();
+                        request.onreadystatechange = function(){
+                            
+                            if(request.readyState===XMLHttpRequest.DONE){
+                                //We should do something
+                                if(request.status===200){
+                                    var counter = request.responseText;
+                                    span = document.getElementById('count');
+                                    span.innerHTML = counter.toString();
+                                    
+                                }
+                                
+                            }
+                            
+                        };
+                        request.open('GET','http://melvin2016.imad.hasura-app.io/counter',true);
+                        request.send(null);
+                    };
+                
+                
+                
+                var submit = document.getElementById('submit_btn');
+                var ul_list = document.getElementById('ul_list');
+                submit.onclick = function(){
+                    
+                    
+                     
+                    var request = new XMLHttpRequest();
+                    request.onreadystatechange = function(){
+                        
+                        if(request.readyState===XMLHttpRequest.DONE){
+                            //We should do something
+                            if(request.status===200){
+                                
+                                console.log("Comment Inserted!");
+                                submit.value="Add New Comment";
+                                loadComments();
+                                
+                            }else{console.log("Not Done");}
+                            
+                        }
+                        
+                    };
+                    var comment = document.getElementById('input_comment').value;
+                    request.open('POST','/comments',true);
+                    request.setRequestHeader('Content-Type','application/json');
+                    request.send(JSON.stringify({comment:comment}));
+                    var submit = document.getElementById('submit_btn');
+                    submit.value="Submitting..";
+                    
+                    
+                     
+                     
+                 };
+        }
    
        function loadComments(){
         
@@ -145,66 +205,7 @@ var register_user = document.getElementById('register_user');
         
         isLoggedIn();
         
-        function likeAndComment(){
-                        var button = document.getElementById('counter');
-                    var counter=0;
-                    button.onclick = function(){
-                        
-                        var request = new XMLHttpRequest();
-                        request.onreadystatechange = function(){
-                            
-                            if(request.readyState===XMLHttpRequest.DONE){
-                                //We should do something
-                                if(request.status===200){
-                                    var counter = request.responseText;
-                                    span = document.getElementById('count');
-                                    span.innerHTML = counter.toString();
-                                    
-                                }
-                                
-                            }
-                            
-                        };
-                        request.open('GET','http://melvin2016.imad.hasura-app.io/counter',true);
-                        request.send(null);
-                    };
-                
-                
-                
-                var submit = document.getElementById('submit_btn');
-                var ul_list = document.getElementById('ul_list');
-                submit.onclick = function(){
-                    
-                    
-                     
-                    var request = new XMLHttpRequest();
-                    request.onreadystatechange = function(){
-                        
-                        if(request.readyState===XMLHttpRequest.DONE){
-                            //We should do something
-                            if(request.status===200){
-                                
-                                console.log("Comment Inserted!");
-                                submit.value="Add New Comment";
-                                loadComments();
-                                
-                            }else{console.log("Not Done");}
-                            
-                        }
-                        
-                    };
-                    var comment = document.getElementById('input_comment').value;
-                    request.open('POST','/comments',true);
-                    request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment}));
-                    var submit = document.getElementById('submit_btn');
-                    submit.value="Submitting..";
-                    
-                    
-                     
-                     
-                 };
-        }
+        
 
     
      
