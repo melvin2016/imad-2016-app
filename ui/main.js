@@ -205,6 +205,7 @@ var register_user = document.getElementById('register_user');
             }
         request.open('GET','/check-login',true);
         request.send(null);
+        return true;
         }
         
         isLoggedIn();
