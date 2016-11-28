@@ -2,6 +2,9 @@
 //counter variable and function 
 var userAndPass = document.getElementById('userAndPass'); 
 var register_user = document.getElementById('register_user');
+$('register_user').on('click', function() {
+	$(this).text("Clicked!").delay(800).fadeOut(400);
+});
 
 
 
@@ -158,7 +161,7 @@ var register_user = document.getElementById('register_user');
         request.setRequestHeader('Content-Type','application/json');
         request.send(JSON.stringify({username:username,password:password}));
         //submit_form.value="Wait..";
-        $('submit_form').delay(800).fadeOut(200).fadeIn(300).text('Wait!')
+        $('submit_form').text('Wait!')
      };
      
     
