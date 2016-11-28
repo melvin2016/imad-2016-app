@@ -152,7 +152,7 @@ var register_user = document.getElementById('register_user');
                         }
                         
                     };
-                    var comment = document.getElementById('input_comment');
+                    var comment = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
                     request.send(JSON.stringify({comment:comment}));
