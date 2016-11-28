@@ -103,7 +103,7 @@ var register_user = document.getElementById('register_user');
             }
         };
         var ul_list = document.getElementById('ul_list');
-        request.open('POST','/loadComments',true);
+        request.open('GET','/loadComments',true);
         request.send(null);
         
     }
@@ -151,7 +151,7 @@ var register_user = document.getElementById('register_user');
                             }
                             
                         };
-                        request.open('GET','http://melvin2016.imad.hasura-app.io/counter',true);
+                        request.open('POST','http://melvin2016.imad.hasura-app.io/counter',true);
                         request.send(null);
                     };
                 
