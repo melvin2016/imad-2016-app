@@ -234,7 +234,7 @@ app.post('/comments',function(req,res){
     
 });
 
-app.get('/loadComments',function(req,res){
+app.post('/loadComments',function(req,res){
     
     if(req.session && req.session.auth && req.session.auth.userId){
         
