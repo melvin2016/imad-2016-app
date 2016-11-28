@@ -11,6 +11,30 @@ var register_user = document.getElementById('register_user');
    var loginArea = document.getElementById('loginArea');
    var submit_form = document.getElementById('submit_form');
    var logoutArea = document.getElementById('logoutArea');
+   
+       function loadComments(){
+        
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function(){
+            
+            if(request.readyState===XMLHttpRequest.DONE){
+                if(request.status === 200){
+                    
+                    var comments = JSON.parse(request.responseText);
+                    commentList="";
+                    for(var i = 0; i<comments.length ; i++){
+                        commentList += "<li>"+comments[i]+"</li>";
+                    }
+                    ul_list.innerHTML = commentList;
+                }
+                
+            }
+        };
+        var ul_list = document.getElementById('ul_list');
+        request.open('POST','/loadComments',true);
+        request.send(null);
+        
+    }
      
      
      submit_form.onclick = function(){
@@ -26,8 +50,9 @@ var register_user = document.getElementById('register_user');
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
+                        loadComments();
                          location.reload(true);
-                         loadComments();
+                         
                          
                     }else if(request.status === 403){
                         alert("Invalid username Or Password!");
@@ -80,29 +105,7 @@ var register_user = document.getElementById('register_user');
          
     };  
     
-    function loadComments(){
-        
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function(){
-            
-            if(request.readyState===XMLHttpRequest.DONE){
-                if(request.status === 200){
-                    
-                    var comments = JSON.parse(request.responseText);
-                    commentList="";
-                    for(var i = 0; i<comments.length ; i++){
-                        commentList += "<li>"+comments[i]+"</li>";
-                    }
-                    ul_list.innerHTML = commentList;
-                }
-                
-            }
-        };
-        var ul_list = document.getElementById('ul_list');
-        request.open('POST','/loadComments',true);
-        request.send(null);
-        
-    }
+
     
     function isLoggedIn(){
         var request = new XMLHttpRequest();
