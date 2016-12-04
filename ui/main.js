@@ -74,10 +74,11 @@ var register_user = document.getElementById('register_user');
                         }
                         
                     };
+                    
                     var comment = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment}));
+                    request.send(JSON.stringify({comment:comment,user:userF}));
                     var submit = document.getElementById('submit_btn');
                     submit.value="Submitting..";
                     
@@ -129,6 +130,7 @@ var register_user = document.getElementById('register_user');
                         loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
+                        userF = request.responseText;
                         
                         
                         
