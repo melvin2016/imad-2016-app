@@ -95,18 +95,18 @@ var register_user = document.getElementById('register_user');
             if(request.readyState===XMLHttpRequest.DONE){
                 if(request.status === 200){
                     
-                    var comments = JSON.parse(request.responseText);
-                    commentList="";
+                    /*var comments = */console.log(JSON.parse(request.responseText));
+                  /*  commentList="";
                     for(var i = 0; i<comments.length ; i++){
                         commentList += "<li>"+comments[i]+"</li>";
                     }
-                    ul_list.innerHTML = commentList;
+                    ul_list.innerHTML = commentList;*/
                 }
                 
             }
         };
         var ul_list = document.getElementById('ul_list');
-        request.open('POST','/loadCommentsUserArtilcle',true);
+        request.open('GET','/loadCommentsUserArtilcle',true);
         request.send(null);
         
     }
