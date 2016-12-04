@@ -96,9 +96,9 @@ var register_user = document.getElementById('register_user');
                 if(request.status === 200){
                     
                     var data = JSON.parse(request.responseText);
-                    var comments = data[1];
-                    var user = data[2];
-                    var article=data[3];
+                    var comments = data[0];
+                    var user = data[1];
+                    var article=data[2];
                     dataList="";
                     for(var i = 0; i<comments.length ; i++){
                         dataList += "<li>"+comments[i]+"&nbsp&nbsp&nbspBy-"+user[i]+"</li>";
