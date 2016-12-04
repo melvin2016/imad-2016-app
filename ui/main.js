@@ -124,13 +124,14 @@ var register_user = document.getElementById('register_user');
                 if(request.readyState===XMLHttpRequest.DONE){
                     //We should do something
                     if(request.status===200){
+                        userF = request.responseText;
                         console.log("User is Successfully Logged In !");
                         
                         alert("User is Successfully Logged In !");
-                        loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
+                        loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+userF+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
-                        userF = request.responseText;
+                        
                         
                         
                         
