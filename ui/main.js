@@ -106,7 +106,7 @@ var register_user = document.getElementById('register_user');
             }
         };
         var ul_list = document.getElementById('ul_list');
-        request.open('POST','/loadComments',true);
+        request.open('POST','/loadCommentsUserArtilcle',true);
         request.send(null);
         
     }
