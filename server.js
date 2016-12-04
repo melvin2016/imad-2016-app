@@ -234,7 +234,7 @@ app.post('/comments',function(req,res){
     
 });
 
-app.post('/loadComments',function(req,res){
+app.post('/loadCommentsUserArtilcle',function(req,res){
     
     if(req.session && req.session.auth && req.session.auth.userId){
         
@@ -245,13 +245,17 @@ app.post('/loadComments',function(req,res){
                 
             }else{
                 comments=[];
+                user=[];
+                article=[];
                 for(var i = 0 ; i<result.rows.length ; i++){
                     
                      comments.push(result.rows[i].comment);
+                     user.push(result.rows[i].user);
+                     article.push(result.rows[i].article);
                     
                     
                 }
-                res.status(200).send(JSON.stringify(comments));
+                res.status(200).send(JSON.stringify([comments,user,article]));
             }
             
         });
