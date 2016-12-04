@@ -37,12 +37,7 @@ app.get('/counter', function(req,res){
 
 });
 
-var comments=[];
-app.get('/submit-comment' , function(req,res){
-    var comment = req.query.comment;
-    comments.push(comment);
-    res.send(JSON.stringify(comments));
-});
+
 
 function createTemplate(data){
     var title = data.title;
