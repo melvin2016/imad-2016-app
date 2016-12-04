@@ -78,7 +78,7 @@ var register_user = document.getElementById('register_user');
                     var comment = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment,user:userF}));
+                    request.send(JSON.stringify({comment:comment,user:"gsgsdg"}));
                     var submit = document.getElementById('submit_btn');
                     submit.value="Submitting..";
                     
@@ -124,7 +124,7 @@ var register_user = document.getElementById('register_user');
                 if(request.readyState===XMLHttpRequest.DONE){
                     //We should do something
                     if(request.status===200){
-                        userF = request.responseText;
+                        var userF = request.responseText;
                         console.log("User is Successfully Logged In !");
                         
                         alert("User is Successfully Logged In !");
