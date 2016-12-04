@@ -95,12 +95,15 @@ var register_user = document.getElementById('register_user');
             if(request.readyState===XMLHttpRequest.DONE){
                 if(request.status === 200){
                     
-                    /*var comments = */console.log(JSON.parse(request.responseText));
-                  /*  commentList="";
+                    var data = JSON.parse(request.responseText);
+                    var comments = data[1];
+                    var user = data[2];
+                    var article=data[3];
+                    dataList="";
                     for(var i = 0; i<comments.length ; i++){
-                        commentList += "<li>"+comments[i]+"</li>";
+                        dataList += "<li>"+comments[i]+"&nbsp&nbsp&nbspBy-"+user[i]+"</li>";
                     }
-                    ul_list.innerHTML = commentList;*/
+                    ul_list.innerHTML = dataList;
                 }
                 
             }
