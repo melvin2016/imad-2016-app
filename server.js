@@ -217,7 +217,7 @@ app.get('/logout',function(req,res){
 app.post('/comments',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
         
-        pool.query("INSERT INTO comments (comment,user,article) VALUES ($1,$2)",[req.body.comment,username],function(err,result){
+        pool.query("INSERT INTO comments (comment,user) VALUES ($1,$2)",[req.body.comment,username],function(err,result){
             if(err){
                 res.status(500).send(err.toString());
             }else{
