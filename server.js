@@ -158,7 +158,7 @@ app.post('/create-user',function(req,res){
 
 app.post('/login',function(req,res){
     
-    var username = req.body.username;
+    username = req.body.username;
     var password = req.body.password;
     
     
@@ -217,7 +217,7 @@ app.get('/logout',function(req,res){
 app.post('/comments',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
         
-        pool.query("INSERT INTO comments (comment,user,article) VALUES ($1,$2)",[req.body.comment,req.body.user],function(err,result){
+        pool.query("INSERT INTO comments (comment,user,article) VALUES ($1,$2)",[req.body.comment,username],function(err,result){
             if(err){
                 res.status(500).send(err.toString());
             }else{
