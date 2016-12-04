@@ -1,4 +1,3 @@
-
 //counter variable and function 
 var userAndPass = document.getElementById('userAndPass'); 
 var register_user = document.getElementById('register_user');
@@ -74,11 +73,10 @@ var register_user = document.getElementById('register_user');
                         }
                         
                     };
-                    
                     var comment = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment,user:"gsgsdg"}));
+                    request.send(JSON.stringify({comment:comment}));
                     var submit = document.getElementById('submit_btn');
                     submit.value="Submitting..";
                     
@@ -124,14 +122,12 @@ var register_user = document.getElementById('register_user');
                 if(request.readyState===XMLHttpRequest.DONE){
                     //We should do something
                     if(request.status===200){
-                        var userF = request.responseText;
                         console.log("User is Successfully Logged In !");
                         
                         alert("User is Successfully Logged In !");
-                        loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+userF+'<i></div>';
+                        loginArea.innerHTML = '<div style="color:green; font-size:15px;"><bold>Hi <bold><i>'+request.responseText+'<i></div>';
                         logoutArea.innerHTML = '<a href="http://melvin2016.imad.hasura-app.io/logout"><button>Logout</button></a>';
                         userAndPass.innerHTML="";
-                        
                         
                         
                         
@@ -225,5 +221,4 @@ var register_user = document.getElementById('register_user');
      
  
  
-
 
