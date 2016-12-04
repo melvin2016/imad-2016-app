@@ -158,7 +158,7 @@ app.post('/create-user',function(req,res){
 
 app.post('/login',function(req,res){
     
-     username = req.body.username;
+    var username = req.body.username;
     var password = req.body.password;
     
     
