@@ -37,7 +37,12 @@ app.get('/counter', function(req,res){
 
 });
 
-
+var comments=[];
+app.get('/submit-comment' , function(req,res){
+    var comment = req.query.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+});
 
 function createTemplate(data){
     var title = data.title;
@@ -54,7 +59,6 @@ function createTemplate(data){
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Baloo+Bhai|Lalezar|Lato|Oswald" rel="stylesheet">
     <link type="text/css"href="/ui/style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-sacle=1">
-
 </head>
 <body>
     <div class="links">
@@ -72,15 +76,12 @@ function createTemplate(data){
                 
               </ul>
             </div>
-
-
     <div class="container">
         
         <div class="center">
             <img src="/ui/${head_img}" class="img-medium"/>
         </div>
         <h1>${heading}<hr></h1>
-
         <p>
             ${para1}
         </p>
@@ -92,7 +93,6 @@ function createTemplate(data){
         </div>
         
     </div>
-
   <footer>
   <p>
     <a href="https://twitter.com/melvingeorge11"><img src="http://icons.iconarchive.com/icons/spoon-graphics/doodle/128/Twitter-icon.png"></a>
@@ -212,7 +212,7 @@ app.get('/logout',function(req,res){
 app.post('/comments',function(req,res){
     if(req.session && req.session.auth && req.session.auth.userId){
         
-        pool.query("INSERT INTO comments (comment,user) VALUES ($1,$2)",[req.body.comment,req.body.user],function(err,result){
+        pool.query("INSERT INTO comments (comment) VALUES ($1)",[req.body.comment],function(err,result){
             if(err){
                 res.status(500).send(err.toString());
             }else{
