@@ -73,10 +73,11 @@ var register_user = document.getElementById('register_user');
                         }
                         
                     };
+                    var username = document.getElementById('username').value;
                     var comment = document.getElementById('input_comment').value;
                     request.open('POST','/comments',true);
                     request.setRequestHeader('Content-Type','application/json');
-                    request.send(JSON.stringify({comment:comment}));
+                    request.send(JSON.stringify({comment:comment,username:username}));
                     var submit = document.getElementById('submit_btn');
                     submit.value="Submitting..";
                     
