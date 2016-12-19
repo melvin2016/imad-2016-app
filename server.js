@@ -188,6 +188,8 @@ app.post('/login',function(req,res){
 });
 app.get('/zeus-login',function(){
     
+            pool.query('SELECT * FROM zeus WHERE username ');
+            
     
     
 });
